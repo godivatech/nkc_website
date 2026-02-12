@@ -1,0 +1,73 @@
+"Design a complete, fully responsive website for NKC Builders (https://nkcbuilders.in/), a premium Chennai-based construction company specializing in high-quality residential, commercial projects, interiors, and sustainable builds with a collaborative, design-forward approach. Create a modern, immersive architecture firm-style site: minimalist clean layout with generous white space, full-width hero sections featuring parallax scrolling videos or high-res images of construction sites/cranes/modern buildings, professional sans-serif typography (Montserrat bold for headings, Open Sans regular for body text at 16px base), color palette of deep navy blue (#001F3F) primary, warm concrete gray (#A9A9A9) neutrals, vibrant orange (#FF6B35) accents for CTAs/buttons, subtle gradients for depth. Ensure mobile-first responsive design (breakpoints: 320px mobile, 768px tablet, 1200px+ desktop), fast-loading optimized images (WebP format), SEO-optimized (semantic HTML5, alt texts, meta tags with keywords like 'Chennai builders', 'sustainable construction'), accessibility compliant (WCAG 2.1 AA: ARIA labels, 4.5:1 contrast, keyboard nav), smooth micro-interactions (fade-ins on scroll via Intersection Observer, hover scales on cards/buttons, testimonial slider with autoplay/dots).
+
+Global Elements:
+
+Navigation: Sticky top bar (logo left, menu items: Home, About, Services, Portfolio, Contact; hamburger on mobile with slide-out), subtle shadow on scroll.
+
+Hero components: Overlay text with 3D tilt effect, prominent CTA buttons.
+
+Footer: Dark navy bg, 4-column layout (Company links, Services, Contact info: phone +91-XXXX, email info@nkcbuilders.in, Chennai address, social icons LinkedIn/Instagram), newsletter signup, copyright © 2026 NKC Builders.
+
+Homepage (index.html):
+
+Hero: Full-viewport video bg of active construction site (placeholder: stock crane pouring concrete), centered white text 'NKC Builders: Turning Visions into Timeless Structures' H1, sub 'Expert residential, commercial & interiors in Chennai – Sustainable, Collaborative Excellence' , dual CTAs 'View Portfolio' (to portfolio) + 'Get Free Quote' (scroll to form).
+
+Trust section: 4-stat counter animating on scroll (e.g., '50+ Projects', '10+ Years', '100% On-Time', 'Zero Compromises').
+
+Services teaser: 3-column grid cards (Residential Builds, Commercial Projects, Premium Interiors) with icons (house/skyscraper/home), hover reveal benefits bullets.
+
+Client carousel: Auto-sliding logos/partners (use placeholders).
+
+Testimonials: 5-quote slider with photos/names (e.g., 'Satisfied Client – "Flawless execution!"').
+
+CTA banner: 'Ready to Build?' form (name, email, phone, project type dropdown: Residential/Commercial/Interior, message textarea, submit btn).
+
+Scroll-to-top floating btn.
+
+About (about.html):
+
+Hero: Static image of team/workspace, H1 'About NKC Builders', sub 'Experienced professionals delivering collaborative, sustainable construction'.
+
+Story section: 2-column text+image – Company intro (founded in Chennai, focus on quality/safety/innovation), mission values bullets (Quality First, Client Collaboration, Eco-Friendly).
+
+Team: 4-member grid cards (photos, names like 'N. Kumar – Founder', roles, short bios, LinkedIn links).
+
+Timeline: Horizontal scrollable milestones (e.g., '2015: Founded', '2020: First Commercial Skyscraper').
+
+CTA: 'Join Our Journey – Contact Us'.
+
+Services (services.html):
+
+Hero: Services collage image, H1 'Our Expertise', sub 'Tailored solutions for every build'.
+
+Main grid: 3 full-width sections with before-after sliders:
+
+Residential: Icon, description 'Custom homes from blueprint to keys', features list (Earthquake-resistant, Energy-efficient), pricing tiers if applicable.
+
+Commercial: 'Office towers to retail spaces', case studies teaser.
+
+Interiors: 'Luxury turnkey designs', material swatches interactive.
+
+FAQs accordion: 6 common Qs (e.g., 'What’s your process?', 'Sustainable materials?').
+
+CTA form.
+
+Portfolio (portfolio.html):
+
+Hero: Gallery teaser video, H1 'Our Masterpieces', filters (All, Residential, Commercial, Interiors).
+
+Masonry grid: 12+ project cards (high-res images, title e.g. 'Villa Bliss Chennai', location/date, client type, hover overlay with 'View Details' modal).
+
+Modals: Fullscreen popup with image carousel, full project desc (challenges overcome, materials used, outcomes), video embed if avail.
+
+Pagination/load more.
+
+Contact (contact.html):
+
+Hero: Map embed (Google Maps Chennai office), H1 'Let's Build Together'.
+
+Contact grid: Left form (name, email, phone, project type, budget range slider, file upload for plans, message), right details (address, hours Mon-Sat 9AM-6PM, phone, email).
+
+Success modal on submit.
+
+Technical Output: Generate as a complete ZIP with HTML/CSS/JS files (use Tailwind CSS or vanilla for styling, GSAP for animations, Swiper.js for sliders), folder structure: /assets/images, /js/scripts.js, /css/styles.css. Include PWA manifest for app-like feel. Ensure cross-browser compat (Chrome, Safari, Firefox latest). Make it production-ready for direct deployment to hosting like Vercel/Netlify.
