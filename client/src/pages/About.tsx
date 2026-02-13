@@ -2,15 +2,15 @@ import { Layout } from "@/components/layout/Layout";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Check, Users, Leaf, ShieldCheck, Linkedin, ArrowRight } from "lucide-react";
 import teamImg from "@/assets/images/about-team.png";
-import imgFounder from "@/assets/images/team/MR. NK. Chandrasoodan-Architect Founder.webp";
-import imgPravin from "@/assets/images/team/Ar. Pravin kumar-Senior Architect.webp";
-import imgRamesh from "@/assets/images/team/MR. Ramesh Kannan-Project Manager.webp";
-import imgSaranya from "@/assets/images/team/MRS. Saranya-Purchase Manager.webp";
-import imgMurali from "@/assets/images/team/Mr. Muralitharan-Procurement Manager.webp";
-import imgDurai from "@/assets/images/team/Mr. Duraikoothan-Site Manager.webp";
-import imgHari from "@/assets/images/team/Mr. Hariharasudan-Site Engineer.webp";
-import imgIbrahim from "@/assets/images/team/Mr. Ibrahim-Quantity Surveyor.webp";
-import imgMathi from "@/assets/images/team/Ar. Mathiyalagan-Junior Architect.webp";
+import imgFounder from "@/assets/images/Team/MR. NK. Chandrasoodan-Architect Founder.webp";
+import imgPravin from "@/assets/images/Team/Ar. Pravin kumar-Senior Architect.webp";
+import imgRamesh from "@/assets/images/Team/MR. Ramesh Kannan-Project Manager.webp";
+import imgSaranya from "@/assets/images/Team/MRS. Saranya-Purchase Manager.webp";
+import imgMurali from "@/assets/images/Team/Mr. Muralitharan-Procurement Manager.webp";
+import imgDurai from "@/assets/images/Team/Mr. Duraikoothan-Site Manager.webp";
+import imgHari from "@/assets/images/Team/Mr. Hariharasudan-Site Engineer.webp";
+import imgIbrahim from "@/assets/images/Team/Mr. Ibrahim-Quantity Surveyor.webp";
+import imgMathi from "@/assets/images/Team/Ar. Mathiyalagan-Junior Architect.webp";
 import { useRef, useState } from "react";
 
 export default function AboutPage() {
