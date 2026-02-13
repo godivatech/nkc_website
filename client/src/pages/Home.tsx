@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { ArrowRight, Building2, Home, PaintBucket, MoveRight } from "lucide-react";
 import heroBg from "@/assets/images/hero-bg.png";
-import project1 from "@/assets/images/project-residential.png";
-import project2 from "@/assets/images/project-commercial.png";
-import project3 from "@/assets/images/project-interior.png";
+import imgAnandham from "@/assets/images/Projects/Andhaman Palace/Main.webp";
+import imgJSKMahal from "@/assets/images/Projects/JSK Mahal/Main.webp";
+import imgSivagangai from "@/assets/images/Projects/Sivagangai Mosque/Main.webp";
+import imgSrimethila from "@/assets/images/Projects/Srimethila Hotel/Main.webp";
+import imgVKT from "@/assets/images/Projects/VKT Commercial Complex/Main.webp";
 import abstractTexture from "@/assets/images/texture-abstract.png";
 import { Link } from "wouter";
 import { useRef, useState } from "react";
@@ -198,11 +200,11 @@ export default function HomePage() {
               className="flex gap-10 px-6 w-max"
             >
               {[
-                { title: "Azure Coast", cat: "Villa", img: project1, id: "01" },
-                { title: "Nexus One", cat: "Office", img: project2, id: "02" },
-                { title: "Luxe Loft", cat: "Interior", img: project3, id: "03" },
-                { title: "The Monolith", cat: "Tower", img: heroBg, id: "04" },
-                { title: "Green Valley", cat: "Community", img: project1, id: "05" },
+                { title: "Anandham Palace", cat: "Residential", img: imgAnandham, id: "01" },
+                { title: "JSK Mahal", cat: "Commercial", img: imgJSKMahal, id: "02" },
+                { title: "Sivagangai Mosque", cat: "Religious", img: imgSivagangai, id: "03" },
+                { title: "Srimethila Hotel", cat: "Hospitality", img: imgSrimethila, id: "04" },
+                { title: "VKT Commercial", cat: "Commercial", img: imgVKT, id: "05" },
               ].map((p, i) => (
                 <div key={i} className="w-[80vw] md:w-[60vw] lg:w-[45vw] flex-shrink-0 group cursor-pointer">
                   <div className="aspect-[16/9] overflow-hidden bg-muted mb-6 relative">
