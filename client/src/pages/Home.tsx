@@ -147,7 +147,7 @@ export default function HomePage() {
         {/* Service Mosaic */}
         <section className="py-32 bg-muted/20">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
               <h2 className="text-6xl md:text-8xl font-display font-bold text-primary uppercase leading-none">
                 Core<br />Domain
               </h2>
