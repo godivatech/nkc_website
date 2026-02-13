@@ -2,43 +2,58 @@ import { Layout } from "@/components/layout/Layout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import project1 from "@/assets/images/project-residential.png";
 import project2 from "@/assets/images/project-commercial.png";
 import project3 from "@/assets/images/project-interior.png";
+import heroBg from "@/assets/images/project-commercial.png";
 
 export default function ServicesPage() {
   return (
     <Layout>
-      <div className="bg-muted/30 py-20 border-b border-border">
-        <div className="container mx-auto px-6">
-           <h1 className="text-5xl font-display font-bold text-primary mb-4">Our Expertise</h1>
-           <p className="text-xl text-muted-foreground max-w-2xl">Tailored solutions for every build. From blueprints to keys, we handle it all.</p>
+      {/* Hero Banner */}
+      <section className="relative h-[60vh] flex items-center bg-primary overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroBg} alt="NKC Services" className="w-full h-full object-cover opacity-40" />
+          <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
         </div>
-      </div>
+        <div className="container mx-auto px-6 relative z-10 pt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
+          >
+            <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6">Our Expertise</h1>
+            <p className="text-xl md:text-2xl text-white/80 font-light max-w-2xl">
+              Tailored solutions for every build. From blueprints to keys, we handle it all.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Residential */}
       <section className="py-24 border-b border-border">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-2 block">01</span>
-            <h2 className="text-4xl font-display font-bold text-primary mb-6">Residential Construction</h2>
+            <h2 className="text-4xl font-display font-bold text-primary mb-6">Construction & Execution</h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              We build homes that stand the test of time. Whether it's a contemporary urban apartment or a sprawling luxury villa, our residential projects focus on livability, aesthetics, and structural integrity.
+              Our team is composed of experienced professionals who are passionate about turning your vision into reality. From planning and design to construction and completion, we provide comprehensive solutions tailored to your specific needs.
             </p>
             <ul className="space-y-4 mb-8">
-               {["Earthquake-Resistant Structures", "Smart Home Integration", "Vaastu Compliant Designs", "Energy Efficient Lighting"].map(item => (
-                 <li key={item} className="flex items-center gap-3 font-medium text-primary">
-                   <Check size={18} className="text-secondary" /> {item}
-                 </li>
-               ))}
+              {["Project Planning & Management", "Quality Construction Standards", "Timeline Adherence", "Safety Compliance"].map(item => (
+                <li key={item} className="flex items-center gap-3 font-medium text-primary">
+                  <Check size={18} className="text-secondary" /> {item}
+                </li>
+              ))}
             </ul>
             <Button asChild className="rounded-none">
-              <Link href="/contact">Start Your Dream Home</Link>
+              <Link href="/contact">Start Your Project</Link>
             </Button>
           </div>
           <div className="aspect-video bg-gray-200 overflow-hidden relative group">
-             <img src={project1} alt="Residential" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src={project1} alt="Construction & Execution" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
           </div>
         </div>
       </section>
@@ -48,23 +63,23 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center md:grid-flow-dense">
           <div className="md:col-start-2">
             <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-2 block">02</span>
-            <h2 className="text-4xl font-display font-bold text-primary mb-6">Commercial Projects</h2>
+            <h2 className="text-4xl font-display font-bold text-primary mb-6">Architecture and Design</h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              From office towers to retail spaces, we construct environments that enhance productivity and business growth. Our commercial builds prioritize safety, functionality, and brand identity.
+              The firm embraces a collaborative approach, working closely with clients to transform their ideas into impactful, aesthetic, design-driven designs that are both sustainable and functional. Despite being a Construction oriented firm, NKC has quickly gained recognition for its cutting-edge, design-forward approach and commitment to pushing the boundaries of architecture.
             </p>
             <ul className="space-y-4 mb-8">
-               {["Steel Structure Specialist", "HVAC & Fire Safety", "Modern Facade Systems", "Parking Solutions"].map(item => (
-                 <li key={item} className="flex items-center gap-3 font-medium text-primary">
-                   <Check size={18} className="text-secondary" /> {item}
-                 </li>
-               ))}
+              {["Sustainable Design Solutions", "Aesthetic Excellence", "Functional Layouts", "Innovative Concepts"].map(item => (
+                <li key={item} className="flex items-center gap-3 font-medium text-primary">
+                  <Check size={18} className="text-secondary" /> {item}
+                </li>
+              ))}
             </ul>
             <Button asChild className="rounded-none">
-              <Link href="/contact">Discuss Your Project</Link>
+              <Link href="/contact">Explore Our Designs</Link>
             </Button>
           </div>
           <div className="aspect-video bg-gray-200 md:col-start-1 overflow-hidden relative group">
-             <img src={project2} alt="Commercial" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src={project2} alt="Architecture and Design" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
           </div>
         </div>
       </section>
@@ -74,23 +89,23 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-2 block">03</span>
-            <h2 className="text-4xl font-display font-bold text-primary mb-6">Interior Design</h2>
+            <h2 className="text-4xl font-display font-bold text-primary mb-6">Interior and Exterior</h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Luxury turnkey designs that transform empty shells into vibrant living and working spaces. We curate materials, furniture, and lighting to match your personal style.
+              Closely working with designers, we specialize in creating unique, functional, and aesthetically pleasing interiors that reflect the personalities and needs of our clients. We offer a full range of services including space planning, furniture selection, color schemes, lighting design, and custom installations. We pride ourselves on paying close attention to detail.
             </p>
             <ul className="space-y-4 mb-8">
-               {["Material Selection", "Custom Joinery", "3D Visualization", "Furniture Procurement"].map(item => (
-                 <li key={item} className="flex items-center gap-3 font-medium text-primary">
-                   <Check size={18} className="text-secondary" /> {item}
-                 </li>
-               ))}
+              {["Space Planning", "Furniture Selection", "Lighting Design", "Custom Installations"].map(item => (
+                <li key={item} className="flex items-center gap-3 font-medium text-primary">
+                  <Check size={18} className="text-secondary" /> {item}
+                </li>
+              ))}
             </ul>
             <Button asChild className="rounded-none">
-              <Link href="/contact">View Gallery</Link>
+              <Link href="/contact">Transform Your Space</Link>
             </Button>
           </div>
           <div className="aspect-video bg-gray-200 overflow-hidden relative group">
-             <img src={project3} alt="Interior" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src={project3} alt="Interior and Exterior" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
           </div>
         </div>
       </section>

@@ -10,10 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
-              <img src={logo} alt="NKC Builders" className="h-10 w-auto bg-white p-1" />
-              <span className="text-xl font-bold tracking-tighter text-white">
-                NKC Builders
-              </span>
+              <img src={logo} alt="NKC Builders" className="h-14 w-auto bg-white p-1" />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed">
               Turning Visions into Timeless Structures. Premium residential and commercial construction in Chennai.
@@ -30,7 +27,6 @@ export function Footer() {
               </a>
             </div>
           </div>
-
           {/* Links */}
           <div>
             <h4 className="text-lg font-display font-semibold mb-6 text-white">Company</h4>
@@ -65,15 +61,15 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin className="shrink-0 text-secondary" size={18} />
-                <span>123 Anna Salai, Thousand Lights,<br />Chennai, Tamil Nadu 600006</span>
+                <span>3/6, Muniyasamy kovil st.,<br />Ramnad-623501</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Phone className="shrink-0 text-secondary" size={18} />
-                <span>+91 98765 43210</span>
+                <span>+91 94431 26608</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Mail className="shrink-0 text-secondary" size={18} />
-                <span>info@nkcbuilders.in</span>
+                <span>nkchandrasoodan@gmail.com</span>
               </li>
             </ul>
           </div>

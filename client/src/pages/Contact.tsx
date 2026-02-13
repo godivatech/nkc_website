@@ -36,7 +36,7 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div className="bg-primary-foreground text-primary p-12 lg:col-span-1 border-r border-border">
             <h3 className="text-2xl font-display font-bold mb-8">Contact Information</h3>
-            
+
             <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="w-10 h-10 bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
@@ -44,17 +44,17 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Head Office</h4>
-                  <p className="text-muted-foreground text-sm">123 Anna Salai, Thousand Lights<br/>Chennai, Tamil Nadu 600006</p>
+                  <p className="text-muted-foreground text-sm">3/6, Muniyasamy kovil st.,<br />Ramnad-623501</p>
                 </div>
               </div>
-              
+
               <div className="flex gap-4">
                 <div className="w-10 h-10 bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
                   <Phone size={20} />
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Phone</h4>
-                  <p className="text-muted-foreground text-sm">+91 98765 43210<br/>+91 44 1234 5678</p>
+                  <p className="text-muted-foreground text-sm">+91 04567 220895<br />+91 94431 26608</p>
                 </div>
               </div>
 
@@ -64,7 +64,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Email</h4>
-                  <p className="text-muted-foreground text-sm">info@nkcbuilders.in<br/>sales@nkcbuilders.in</p>
+                  <p className="text-muted-foreground text-sm">nkchandrasoodan@gmail.com</p>
                 </div>
               </div>
 
@@ -74,7 +74,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Working Hours</h4>
-                  <p className="text-muted-foreground text-sm">Mon - Sat: 9:00 AM - 6:00 PM<br/>Sunday: Closed</p>
+                  <p className="text-muted-foreground text-sm">Mon - Sat: 8:00 AM - 8:00 PM<br />Sunday: Closed</p>
                 </div>
               </div>
             </div>
@@ -94,25 +94,25 @@ export default function ContactPage() {
                   <Input id="email" type="email" placeholder="john@example.com" required className="rounded-none h-12" />
                 </div>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone Number</Label>
                   <Input id="phone" placeholder="+91 98765 43210" className="rounded-none h-12" />
                 </div>
                 <div className="space-y-2">
-                   <Label htmlFor="type">Project Type</Label>
-                   <Select>
-                     <SelectTrigger className="rounded-none h-12">
-                       <SelectValue placeholder="Select Type" />
-                     </SelectTrigger>
-                     <SelectContent>
-                       <SelectItem value="residential">Residential</SelectItem>
-                       <SelectItem value="commercial">Commercial</SelectItem>
-                       <SelectItem value="interiors">Interiors</SelectItem>
-                       <SelectItem value="renovation">Renovation</SelectItem>
-                     </SelectContent>
-                   </Select>
+                  <Label htmlFor="type">Project Type</Label>
+                  <Select>
+                    <SelectTrigger className="rounded-none h-12">
+                      <SelectValue placeholder="Select Type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="residential">Residential</SelectItem>
+                      <SelectItem value="commercial">Commercial</SelectItem>
+                      <SelectItem value="interiors">Interiors</SelectItem>
+                      <SelectItem value="renovation">Renovation</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </div>
 
@@ -121,10 +121,10 @@ export default function ContactPage() {
                   <Label>Budget Range (Lakhs)</Label>
                   <span className="text-secondary font-bold">₹{budget}L - ₹{budget[0] + 50}L+</span>
                 </div>
-                <Slider 
-                  defaultValue={[50]} 
-                  max={500} 
-                  step={10} 
+                <Slider
+                  defaultValue={[50]}
+                  max={500}
+                  step={10}
                   onValueChange={setBudget}
                   className="py-4"
                 />
@@ -144,14 +144,14 @@ export default function ContactPage() {
       </div>
 
       {/* Map */}
-      <div className="h-[400px] w-full bg-muted grayscale">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248756.1167537332!2d80.06892435776632!3d13.047487786016666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1707900000000!5m2!1sen!2sin" 
-          width="100%" 
-          height="100%" 
-          style={{border:0}} 
-          allowFullScreen 
-          loading="lazy" 
+      <div className="h-[400px] w-full bg-muted">
+        <iframe
+          src="https://maps.google.com/maps?q=9.369650787567886,78.8248505743824&t=&z=17&ie=UTF8&output=embed"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
@@ -159,7 +159,7 @@ export default function ContactPage() {
       <Dialog open={showSuccess} onOpenChange={setShowSuccess}>
         <DialogContent className="sm:max-w-md text-center py-10">
           <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-             <CheckCircle2 className="text-green-600" size={32} />
+            <CheckCircle2 className="text-green-600" size={32} />
           </div>
           <h2 className="text-2xl font-display font-bold text-primary mb-2">Message Sent!</h2>
           <p className="text-muted-foreground mb-6">Thank you for contacting NKC Builders. Our team will get back to you within 24 hours.</p>
