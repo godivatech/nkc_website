@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { Check, Users, Leaf, ShieldCheck, Linkedin, ArrowRight } from "lucide-react";
+import { Check, Users, Leaf, ShieldCheck, Linkedin, ArrowRight, MapPin, Target, Building2, TrendingUp } from "lucide-react";
 import teamImg from "@/assets/images/about-team.png";
 import imgFounder from "@/assets/images/Team/MR. NK. Chandrasoodan-Architect Founder.webp";
 import imgPravin from "@/assets/images/Team/Ar. Pravin kumar-Senior Architect.webp";
@@ -21,7 +21,7 @@ export default function AboutPage() {
     offset: ["start end", "end start"]
   });
 
-  const x = useTransform(scrollYProgress, [0.1, 0.9], ["50%", "-100%"]);
+  const x = useTransform(scrollYProgress, [0.1, 0.9], ["20%", "-200%"]);
   return (
     <Layout>
       {/* Hero */}
@@ -127,6 +127,66 @@ export default function AboutPage() {
               <p className="text-white/70 text-lg leading-relaxed font-light">
                 By fostering a collaborative environment and prioritizing clear communication, we aim to bring each project to life with precision and care, ensuring the long-term success of every endeavor we undertake within budget, and with the highest level of professionalism and integrity. Our focus is on building strong, lasting relationships with our clients, partners, and communities.
               </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder's Message Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-muted/30 skew-x-12 transform origin-top-right mix-blend-multiply" />
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-5 relative"
+            >
+              <div className="aspect-[3/4] overflow-hidden rounded-sm relative z-10">
+                <img
+                  src={imgFounder}
+                  alt="Mr. NK. Chandrasoodan - Founder"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+              <div className="absolute -bottom-8 -left-8 w-2/3 h-2/3 border-l-2 border-b-2 border-primary/10 -z-0" />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="lg:col-span-7 space-y-8"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-[1px] bg-secondary" />
+                <span className="text-secondary font-bold tracking-[0.3em] uppercase text-sm">Founder's Message</span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-primary leading-tight">
+                "Architecture is a language, and every structure we build tells a <span className="text-secondary italic font-light">story of trust</span>."
+              </h2>
+
+              <div className="space-y-6 text-muted-foreground text-lg leading-relaxed font-light">
+                <p>
+                  At NKC Builders, we don't just construct buildings — we build homes where families grow, businesses thrive, and dreams become reality. With over 18 years of experience, our commitment to quality craftsmanship and honest relationships has been the foundation of everything we do.
+                </p>
+                <p>
+                  I personally oversee our projects to ensure they meet the standards I would expect for my own family. Our vision has always been to leave a legacy of precision and excellence across the skyline of South India.
+                </p>
+              </div>
+
+              <div className="pt-8 mt-8 border-t border-primary/10">
+                <h4 className="text-2xl font-display font-bold text-primary">Mr. NK. Chandrasoodan</h4>
+                <p className="text-secondary tracking-widest uppercase text-sm font-bold mt-1">Founder & Managing Director</p>
+                {/* Optional signature placeholder */}
+                <div className="mt-6 opacity-30">
+                  <span className="font-display text-4xl italic tracking-widest">NK. Chandrasoodan</span>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -295,8 +355,89 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Service Location & Capacity Section */}
+      <section className="py-24 bg-white overflow-hidden relative">
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Our Reach & Capabilities</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-primary">Building Across Tamil Nadu</h2>
+          </div>
+
+          <div className="grid lg:grid-cols-12 gap-8 items-stretch">
+            {/* Reach Column */}
+            <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: <MapPin className="w-6 h-6" />,
+                  title: "Initial Operations",
+                  desc: "Began working in and around Ramanathapuram, establishing our core foundation."
+                },
+                {
+                  icon: <TrendingUp className="w-6 h-6" />,
+                  title: "Gradual Expansion",
+                  desc: "Extended operations to Sivagangai, Rajapalayam, Madurai, Dindigul, Coimbatore and Chennai."
+                },
+                {
+                  icon: <Target className="w-6 h-6" />,
+                  title: "Current Reach",
+                  desc: "Now fully equipped and actively undertaking projects across the entirety of Tamil Nadu."
+                }
+              ].map((item, i) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  key={i}
+                  className={`bg-zinc-50 p-8 border border-primary/5 hover:border-secondary/30 transition-all duration-300 shadow-sm hover:shadow-lg ${i === 2 ? 'sm:col-span-2' : ''}`}
+                >
+                  <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mb-6 shadow-sm">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-primary mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Capacity Column */}
+            <div className="lg:col-span-5 relative">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="h-full bg-primary text-white p-10 md:p-14 overflow-hidden relative flex flex-col justify-center rounded-sm"
+              >
+                {/* Decorative background logo/icon */}
+                <div className="absolute -right-10 -bottom-10 text-white/5">
+                  <Building2 className="w-64 h-64" />
+                </div>
+
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-12 h-[1px] bg-secondary" />
+                    <span className="text-secondary font-bold tracking-[0.2em] uppercase text-sm">Capacity & Assets</span>
+                  </div>
+
+                  <h3 className="text-3xl md:text-4xl font-display font-light leading-snug mb-8">
+                    Equipped to handle projects up to <br />
+                    <span className="text-secondary font-bold text-5xl md:text-6xl block mt-4 mb-2">1 Lakh</span>
+                    <span className="text-secondary/80 font-medium text-xl tracking-widest uppercase">sq. ft. built-up area</span>
+                  </h3>
+
+                  <p className="text-white/70 text-lg font-light leading-relaxed max-w-sm">
+                    We possess vast resources, modern machinery, and a dynamic workforce capable of seamlessly executing massive constructions.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Timeline Section */}
-      <div ref={timelineRef} className="h-[250vh] relative bg-primary text-white">
+      <div ref={timelineRef} className="h-[400vh] relative bg-primary text-white">
         <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
           <div className="container mx-auto px-6 mb-12">
             <motion.h2
@@ -313,12 +454,16 @@ export default function AboutPage() {
             className="flex gap-12 px-6 w-max items-center"
           >
             {[
-              { year: "2015", title: "Founded", desc: "NKC Builders established in Chennai with a small team of 5." },
-              { year: "2017", title: "First Villa Project", desc: "Completed our first luxury villa in ECR, setting a benchmark." },
-              { year: "2019", title: "Expansion", desc: "Opened new office and expanded into commercial construction." },
-              { year: "2020", title: "First Skyscraper", desc: "Awarded contract for a 15-story commercial tower in OMR." },
-              { year: "2023", title: "Sustainability Award", desc: "Recognized for eco-friendly construction practices." },
-              { year: "2026", title: "Future Vision", desc: "Aiming to become the leading sustainable builder in South India." }
+              { year: "2007", title: "Mrs. Suleikha Residence", desc: "Keelakarai – 8,000 sq.ft." },
+              { year: "2009", title: "Mrs. Reehana Residence", desc: "Keelakarai – 5,000 sq.ft." },
+              { year: "2011", title: "Mr. Siva Farmhouse", desc: "Coimbatore – 6,000 sq.ft." },
+              { year: "2012", title: "Pearl Hotel", desc: "Rameswaram – 30,000 sq.ft." },
+              { year: "2015", title: "Bull House", desc: "Madurai – 12,000 sq.ft." },
+              { year: "2018", title: "JSK Mahal", desc: "Sathirakudi – 15,000 sq.ft." },
+              { year: "2020", title: "Sremethila Hotel", desc: "Rameswaram – 45,000 sq.ft." },
+              { year: "2022", title: "Alfareeda Textile & Super Market", desc: "Ramanathapuram – 18,000 sq.ft." },
+              { year: "2026", title: "Sivagangai Mosque", desc: "Sivagangai – 8,500 sq.ft." },
+              { year: "2026", title: "VKT", desc: "Sivagangai – 50,000 sq.ft." }
             ].map((item, i) => (
               <div key={i} className="min-w-[350px] md:min-w-[450px] border-l-2 border-white/20 pl-8 relative py-4 group">
                 <div className="absolute top-0 left-[-6px] w-3 h-3 bg-secondary rounded-full group-hover:scale-150 transition-transform duration-300 shadow-[0_0_15px_rgba(234,179,8,0.5)]" />

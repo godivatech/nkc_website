@@ -110,8 +110,69 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Construction Process - 14 Steps */}
+      <section className="py-32 bg-zinc-50 relative overflow-hidden">
+        {/* Decorative Grid Background */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-24">
+            <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">The Blueprint</span>
+            <h2 className="text-4xl md:text-6xl font-display font-bold text-primary">Construction Process</h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">Our meticulous 14-step methodology ensuring precision from the first handshake to the final key handover.</p>
+          </div>
+
+          <div className="max-w-6xl mx-auto border-t-2 border-primary mt-16">
+            <div className="flex flex-col">
+              {[
+                { title: "Enquiry", desc: "Enquiries are pre-dominantly through word of mouth, reflecting strong client satisfaction and trust." },
+                { title: "Project Initiation & Client Brief", desc: "Finalising project scope through various client discussions on budget, timeline, purpose. It includes feasibility study on site respective to the project." },
+                { title: "Site Survey & Investigation", desc: "Topographical survey, soil investigation and bearing capacity test, Utility availability check on water, electricity, drain." },
+                { title: "Design & Planning", desc: "Architectural approach begins here, design development and structural design and analysis. Cost estimation and BOQ preparation involves in this step." },
+                { title: "Contract Finalisation", desc: "Payment details on civil scope gets discussed here. Agreement process happens with the clarity of discussed design process." },
+                { title: "Project Scheduling", desc: "Architectural team provides stage wise working drawing. Project engineers and Site supervisors are assigned." },
+                { title: "Super Structure Construction", desc: "Excavation, PCC laying, Foundation concrete and curing, columns, beams and slab casting. Floor by floor progress monitoring takes place with quality control." },
+                { title: "MEP & Lighting Co-ordination", desc: "Electrical conduits, plumbing and sanitary lines, HVAC, Fire-fighting and lift works. Testing and inspection of services are inevitable." },
+                { title: "External Development", desc: "Compound wall, gates, roads, pavements and landscaping with storm water drainage and sewage systems. Parking areas and external lightings are well-organized." },
+                { title: "Quality Control & Safety", desc: "Workmanship inspection and material testing. Structural and service testing. Safety audits and compliance checks are done after each and every steps of the process." },
+                { title: "Interior Material Finalization", desc: "Interior design and options are delivered in the process of construction and materials will be finalized leading with Architect team. Additional finishes are being discussed." },
+                { title: "Final Inspection", desc: "Rectification of defects and snags with punch list preparation if any." },
+                { title: "Hand-over", desc: "Submission of as-built drawings, Operation and maintenance manuals handover. Key handover with no further defect." },
+                { title: "Defects Liability Period", desc: "Post-handover maintenance support. Rectification of defects during DLP. Final closure after DLP completion." }
+              ].map((step, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-10 md:py-14 border-b border-primary/10 group hover:bg-primary transition-colors duration-700 px-6 lg:px-12 items-start"
+                >
+                  <div className="md:col-span-2 flex items-center">
+                    <span className="text-4xl md:text-6xl font-display font-light text-primary/20 group-hover:text-secondary group-hover:opacity-100 transition-all duration-700">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+
+                  <div className="md:col-span-4 flex items-center">
+                    <h3 className="text-2xl md:text-3xl font-display font-bold text-primary group-hover:text-white transition-colors duration-700">
+                      {step.title}
+                    </h3>
+                  </div>
+
+                  <div className="md:col-span-6 flex items-center">
+                    <p className="text-lg text-muted-foreground group-hover:text-white/70 transition-colors duration-700 leading-relaxed font-light">
+                      {step.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQs */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white border-t border-border">
         <div className="container mx-auto px-6 max-w-3xl">
           <h2 className="text-3xl font-display font-bold text-center mb-12">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="w-full">

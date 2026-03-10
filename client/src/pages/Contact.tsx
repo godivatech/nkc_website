@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Map } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -75,6 +75,28 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-bold mb-1">Working Hours</h4>
                   <p className="text-muted-foreground text-sm">Mon - Sat: 8:00 AM - 8:00 PM<br />Sunday: Closed</p>
+                </div>
+              </div>
+
+              {/* Service Areas */}
+              <div className="pt-8 mt-8 border-t border-border">
+                <div className="flex gap-4 mb-4">
+                  <div className="w-10 h-10 bg-primary flex items-center justify-center text-white shrink-0">
+                    <Map size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-1">Active Service Areas</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      We handle projects across Tamil Nadu, with major operations currently in:
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2 pl-14">
+                  {['Ramanathapuram', 'Sivagangai', 'Madurai', 'Coimbatore', 'Chennai', 'Dindigul', 'Rajapalayam'].map((city) => (
+                    <span key={city} className="text-xs font-medium bg-muted text-muted-foreground px-3 py-1 border border-border">
+                      {city}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>

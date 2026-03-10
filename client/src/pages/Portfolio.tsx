@@ -12,6 +12,13 @@ import imgAnandham6 from "@/assets/images/Projects/Andhaman Palace/image 6.webp"
 import imgAnandham7 from "@/assets/images/Projects/Andhaman Palace/image 7.webp";
 import imgAnandham8 from "@/assets/images/Projects/Andhaman Palace/image 8.webp";
 
+import imgAnanthamOffice from "@/assets/images/Projects/Anantham office/main.jpeg";
+import imgAnanthamOffice1 from "@/assets/images/Projects/Anantham office/image 1.jpeg";
+import imgAnanthamOffice2 from "@/assets/images/Projects/Anantham office/image 2.jpeg";
+import imgAnanthamOffice3 from "@/assets/images/Projects/Anantham office/image 3.jpeg";
+import imgAnanthamOffice4 from "@/assets/images/Projects/Anantham office/image 4.jpeg";
+import imgAnanthamOffice5 from "@/assets/images/Projects/Anantham office/image 5.jpeg";
+
 import imgAwinco from "@/assets/images/Projects/Awinco Badminton Court/Main.webp";
 import imgAwinco1 from "@/assets/images/Projects/Awinco Badminton Court/image 1.webp";
 import imgAwinco2 from "@/assets/images/Projects/Awinco Badminton Court/image 2.webp";
@@ -22,6 +29,12 @@ import imgJavith1 from "@/assets/images/Projects/Javith Residence/image 1.webp";
 import imgJavith2 from "@/assets/images/Projects/Javith Residence/image 2.webp";
 import imgJavith3 from "@/assets/images/Projects/Javith Residence/image 3.webp";
 import imgJavith4 from "@/assets/images/Projects/Javith Residence/image 4.webp";
+import imgJavith5 from "@/assets/images/Projects/Javith Residence/image 5.jpeg";
+import imgJavith6 from "@/assets/images/Projects/Javith Residence/image 6.jpeg";
+import imgJavith7 from "@/assets/images/Projects/Javith Residence/image 7.jpeg";
+import imgJavith8 from "@/assets/images/Projects/Javith Residence/image 8.jpeg";
+import imgJavith9 from "@/assets/images/Projects/Javith Residence/image 9.jpeg";
+import imgJavith10 from "@/assets/images/Projects/Javith Residence/image 10.jpeg";
 
 import imgJeyam from "@/assets/images/Projects/Jeyam Residence/Main.webp";
 import imgJeyam1 from "@/assets/images/Projects/Jeyam Residence/image 1.webp";
@@ -29,6 +42,7 @@ import imgJeyam2 from "@/assets/images/Projects/Jeyam Residence/image 2.webp";
 import imgJeyam3 from "@/assets/images/Projects/Jeyam Residence/image 3.webp";
 import imgJeyam4 from "@/assets/images/Projects/Jeyam Residence/image 4.webp";
 import imgJeyam5 from "@/assets/images/Projects/Jeyam Residence/image 5.webp";
+import imgJeyam6 from "@/assets/images/Projects/Jeyam Residence/image 6.jpeg";
 
 import imgJSKMahal from "@/assets/images/Projects/JSK Mahal/Main.webp";
 import imgJSKMahal1 from "@/assets/images/Projects/JSK Mahal/image 1.webp";
@@ -53,6 +67,14 @@ import imgKarupusamy2 from "@/assets/images/Projects/Karupusamy Residence/image 
 import imgKarupusamy3 from "@/assets/images/Projects/Karupusamy Residence/image 3.webp";
 import imgKarupusamy4 from "@/assets/images/Projects/Karupusamy Residence/image 4.webp";
 import imgKarupusamy5 from "@/assets/images/Projects/Karupusamy Residence/image 5.webp";
+import imgKarupusamy6 from "@/assets/images/Projects/Karupusamy Residence/image 6.jpeg";
+import imgKarupusamy7 from "@/assets/images/Projects/Karupusamy Residence/image 7.jpeg";
+import imgKarupusamy8 from "@/assets/images/Projects/Karupusamy Residence/image 8.jpeg";
+import imgKarupusamy9 from "@/assets/images/Projects/Karupusamy Residence/image 9.jpeg";
+import imgKarupusamy10 from "@/assets/images/Projects/Karupusamy Residence/image 10.jpeg";
+import imgKarupusamy11 from "@/assets/images/Projects/Karupusamy Residence/image 11.jpeg";
+import imgKarupusamy12 from "@/assets/images/Projects/Karupusamy Residence/image 12.jpeg";
+import imgKarupusamy13 from "@/assets/images/Projects/Karupusamy Residence/image 13.jpeg";
 
 import imgPeeriyapattinam from "@/assets/images/Projects/Peeriyapattinam Mosque/Main.webp";
 import imgPeeriyapattinam1 from "@/assets/images/Projects/Peeriyapattinam Mosque/image 1.webp";
@@ -81,11 +103,14 @@ import imgVKT3 from "@/assets/images/Projects/VKT Commercial Complex/image 3.web
 import imgVKT4 from "@/assets/images/Projects/VKT Commercial Complex/image 4.webp";
 import imgVKT5 from "@/assets/images/Projects/VKT Commercial Complex/image 5.webp";
 import imgVKT6 from "@/assets/images/Projects/VKT Commercial Complex/image 6.webp";
+import imgVKT7 from "@/assets/images/Projects/VKT Commercial Complex/image 7.jpeg";
+import imgVKT8 from "@/assets/images/Projects/VKT Commercial Complex/image 8.jpeg";
+import imgVKT9 from "@/assets/images/Projects/VKT Commercial Complex/image 9.jpeg";
 
 const projects = [
   {
     id: 1,
-    title: "Anandham Palace",
+    title: "Anantham bungalow",
     location: "Rajapalayam",
     category: "Residential",
     type: "Classic Bungalow",
@@ -119,19 +144,22 @@ const projects = [
     year: "2025",
     status: "Completed",
     image: imgJavith,
-    gallery: [imgJavith, imgJavith1, imgJavith2, imgJavith3, imgJavith4],
+    gallery: [
+      imgJavith, imgJavith1, imgJavith2, imgJavith3, imgJavith4,
+      imgJavith5, imgJavith6, imgJavith7, imgJavith8, imgJavith9, imgJavith10
+    ],
     description: "This villa presents a harmonious fusion of modernism and Islamic elements, creating a home that is both visually striking and spiritually serene. With clean lines, geometric harmony, and elegant Islamic detailing, the design reflects timeless cultural values reimagined for the modern world."
   },
   {
     id: 4,
-    title: "Jeyam Residence",
+    title: "Jeyam Bridal fashion studio",
     location: "Ramanathapuram",
     category: "Residential",
     type: "Villa / Commercial",
     year: "2025",
     status: "Completed",
     image: imgJeyam,
-    gallery: [imgJeyam, imgJeyam1, imgJeyam2, imgJeyam3, imgJeyam4, imgJeyam5],
+    gallery: [imgJeyam, imgJeyam1, imgJeyam2, imgJeyam3, imgJeyam4, imgJeyam5, imgJeyam6],
     description: "This modern residence is a bold expression of minimalism, function, and refined aesthetics, offering a seamless blend of architecture and lifestyle. Clean lines, open spaces, and natural light define the character of the home, where every detail is purposeful and uncluttered."
   },
   {
@@ -175,7 +203,9 @@ const projects = [
     image: imgKarupusamy,
     gallery: [
       imgKarupusamy, imgKarupusamy1, imgKarupusamy2, imgKarupusamy3,
-      imgKarupusamy4, imgKarupusamy5
+      imgKarupusamy4, imgKarupusamy5, imgKarupusamy6, imgKarupusamy7,
+      imgKarupusamy8, imgKarupusamy9, imgKarupusamy10, imgKarupusamy11,
+      imgKarupusamy12, imgKarupusamy13
     ],
     description: "This residence embodies the essence of modern minimalism, where simplicity meets sophistication. With clean lines, open spaces, and a restrained material palette, the design celebrates clarity, calm, and function, creating a peaceful sanctuary tailored for contemporary living."
   },
@@ -232,9 +262,25 @@ const projects = [
     image: imgVKT,
     gallery: [
       imgVKT, imgVKT1, imgVKT2, imgVKT3,
-      imgVKT4, imgVKT5, imgVKT6
+      imgVKT4, imgVKT5, imgVKT6, imgVKT7,
+      imgVKT8, imgVKT9
     ],
     description: "This modern commercial complex is a multi-functional destination that blends business, leisure, and hospitality under one roof. Designed with a focus on efficiency, elegance, and experience, the building integrates a spacious banquet hall and fine-dining restaurant."
+  },
+  {
+    id: 12,
+    title: "Anantham Office",
+    location: "Ramanathapuram",
+    category: "Commercial",
+    type: "Office Space",
+    year: "Ongoing",
+    status: "Ongoing",
+    image: imgAnanthamOffice,
+    gallery: [
+      imgAnanthamOffice, imgAnanthamOffice1, imgAnanthamOffice2,
+      imgAnanthamOffice3, imgAnanthamOffice4, imgAnanthamOffice5
+    ],
+    description: "A modern workspace designed for productivity, collaboration, and inspiration. With functional and aesthetic environments, Anantham Office provides state-of-the-art office infrastructure to support dynamic teams."
   },
 ];
 
