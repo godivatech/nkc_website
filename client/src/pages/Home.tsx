@@ -18,10 +18,10 @@ import abstractTexture from "@/assets/images/texture-abstract.png";
 // Upload your videos to Cloudinary and replace these placeholders with the
 // actual delivery URLs. Format: https://res.cloudinary.com/<cloud>/video/upload/<public_id>
 // ─────────────────────────────────────────────────────────────────────────────
-const vidTest1 = "https://res.cloudinary.com/godivatech/video/upload/nkc-builders-website/testimonials/testimonial-1.mp4";
-const vidTest2 = "https://res.cloudinary.com/godivatech/video/upload/nkc-builders-website/testimonials/testimonial-2.mp4";
-const vidTest3 = "https://res.cloudinary.com/godivatech/video/upload/nkc-builders-website/testimonials/testimonial-3.mp4";
-const vidTest4 = "https://res.cloudinary.com/godivatech/video/upload/nkc-builders-website/testimonials/testimonial-4.mp4";
+const vidTest1 = "https://res.cloudinary.com/doeodacsg/video/upload/v1773220411/nkc-builders-website/testimonials/testimonial-1.mp4";
+const vidTest2 = "https://res.cloudinary.com/doeodacsg/video/upload/v1773221238/InShot_20260122_160832138_abp07g.mp4";
+const vidTest3 = "https://res.cloudinary.com/doeodacsg/video/upload/v1773221127/InShot_20260122_160336182_gd8a39.mp4";
+const vidTest4 = "https://res.cloudinary.com/doeodacsg/video/upload/v1773222180/InShot_20260122_155805982_m6a7sq.mp4";
 
 import { Link } from "wouter";
 
