@@ -27,7 +27,170 @@ import { Link } from "wouter";
 
 
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
+
+// ── Instagram-style Video Card ──────────────────────────────────────────────
+function VideoCard({ src, index }: { src: string; index: number }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [muted, setMuted] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const [ready, setReady] = useState(false);
+
+  // Cloudinary poster: grab first frame as jpg, scaled to 400px
+  const poster = src
+    .replace("/video/upload/", "/video/upload/so_0,w_400,f_jpg/")
+    .replace(/\.mp4$/, ".jpg");
+
+  const togglePlay = useCallback(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (v.paused) {
+      setLoading(true);
+      // Automatically unmute when user explicitly clicks to play
+      v.muted = false;
+      setMuted(false);
+
+      v.play()
+        .then(() => { setPlaying(true); setLoading(false); })
+        .catch(() => { setLoading(false); });
+    } else {
+      v.pause();
+      setPlaying(false);
+    }
+  }, []);
+
+  const toggleMute = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = !v.muted;
+    setMuted(v.muted);
+  }, []);
+
+  // Progress tracking
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+
+    const onTimeUpdate = () => {
+      if (v.duration) setProgress((v.currentTime / v.duration) * 100);
+    };
+    const onWaiting = () => setLoading(true);
+    const onCanPlay = () => { setLoading(false); setReady(true); };
+    const onEnded = () => { setPlaying(false); setProgress(0); };
+
+    v.addEventListener("timeupdate", onTimeUpdate);
+    v.addEventListener("waiting", onWaiting);
+    v.addEventListener("canplay", onCanPlay);
+    v.addEventListener("ended", onEnded);
+
+    return () => {
+      v.removeEventListener("timeupdate", onTimeUpdate);
+      v.removeEventListener("waiting", onWaiting);
+      v.removeEventListener("canplay", onCanPlay);
+      v.removeEventListener("ended", onEnded);
+    };
+  }, []);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className="relative bg-primary overflow-hidden rounded-sm shadow-2xl aspect-[9/16] cursor-pointer select-none"
+      onClick={togglePlay}
+    >
+      {/* Video */}
+      <video
+        ref={videoRef}
+        src={src}
+        poster={poster}
+        className="w-full h-full object-cover"
+        loop
+        muted
+        playsInline
+        preload="metadata"
+      />
+
+      {/* Dark overlay when paused */}
+      <div
+        className={`absolute inset-0 transition-colors duration-300 pointer-events-none ${playing ? "bg-transparent" : "bg-black/30"
+          }`}
+      />
+
+      {/* Loading spinner */}
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+          <div className="w-10 h-10 border-3 border-white/30 border-t-white rounded-full animate-spin" />
+        </div>
+      )}
+
+      {/* Play button (visible when paused & not loading) */}
+      {!playing && !loading && (
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center pointer-events-none z-10 transition-transform duration-300 hover:scale-110">
+          <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-white border-b-[10px] border-b-transparent ml-1" />
+        </div>
+      )}
+
+      {/* Pause icon flash (visible briefly when playing) */}
+      {playing && !loading && (
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10 opacity-0 hover:opacity-60 transition-opacity">
+          <div className="flex gap-1.5">
+            <div className="w-3 h-8 bg-white rounded-sm" />
+            <div className="w-3 h-8 bg-white rounded-sm" />
+          </div>
+        </div>
+      )}
+
+      {/* Bottom controls bar */}
+      <div className="absolute inset-x-0 bottom-0 z-10 pointer-events-none">
+        {/* Progress bar */}
+        <div className="w-full h-1 bg-white/20">
+          <div
+            className="h-full bg-secondary transition-[width] duration-200 ease-linear"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+
+        {/* Info + Mute */}
+        <div className="flex items-end justify-between p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
+          <div>
+            <span className="text-secondary font-display font-bold tracking-wider text-[10px] uppercase mb-0.5 block">
+              Story {index + 1}
+            </span>
+            <p className="text-white font-display font-bold text-sm uppercase tracking-normal italic leading-none">
+              Client Experience
+            </p>
+          </div>
+
+          {/* Mute toggle */}
+          <button
+            onClick={toggleMute}
+            className="pointer-events-auto w-8 h-8 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors"
+            aria-label={muted ? "Unmute" : "Mute"}
+          >
+            {muted ? (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                <line x1="23" y1="9" x2="17" y2="15" />
+                <line x1="17" y1="9" x2="23" y2="15" />
+              </svg>
+            ) : (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+              </svg>
+            )}
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function HomePage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -372,58 +535,8 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { vid: vidTest1 },
-                { vid: vidTest2 },
-                { vid: vidTest3 },
-                { vid: vidTest4 },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="group relative bg-primary overflow-hidden border border-primary/5 rounded-sm shadow-2xl aspect-[9/16]"
-                  onMouseEnter={(e) => {
-                    const video = e.currentTarget.querySelector('video');
-                    if (video) {
-                      video.muted = false; // Unmute on hover
-                      video.play().catch(() => {
-                        // Fallback if browser blocks unmuted auto-play without prior click
-                        video.muted = true;
-                        video.play().catch(() => { });
-                      });
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    const video = e.currentTarget.querySelector('video');
-                    if (video) {
-                      video.pause();
-                      video.muted = true; // Mute again on leave
-                      video.currentTime = 0;
-                    }
-                  }}
-                >
-                  <video
-                    src={item.vid}
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                    loop
-                    muted
-                    playsInline
-
-                    preload="metadata"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
-                  <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-0">
-                    <span className="text-secondary font-display font-bold tracking-wider text-[10px] uppercase mb-1 block">Story {i + 1}</span>
-                    <p className="text-white font-display font-bold text-lg uppercase tracking-normal italic leading-none">Client Experience</p>
-                  </div>
-                  {/* Play Icon Placeholder */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:opacity-0 group-hover:scale-150 transition-all duration-500 pointer-events-none">
-                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[15px] border-l-white border-b-[10px] border-b-transparent ml-1" />
-                  </div>
-                </motion.div>
+              {[vidTest1, vidTest2, vidTest3, vidTest4].map((src, i) => (
+                <VideoCard key={i} src={src} index={i} />
               ))}
             </div>
 
