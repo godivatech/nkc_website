@@ -11,7 +11,17 @@ import imgSivagangai from "@/assets/images/Projects/Sivagangai Mosque/Main.webp"
 import imgSrimethila from "@/assets/images/Projects/Srimethila Hotel/Main.webp";
 import imgVKT from "@/assets/images/Projects/VKT Commercial Complex/Main.webp";
 import abstractTexture from "@/assets/images/texture-abstract.png";
+
+// Video Testimonials
+import vidTest1 from "@/assets/Videos/Testimonial/InShot_20260122_154804678.mp4";
+import vidTest2 from "@/assets/Videos/Testimonial/InShot_20260122_155805982.mp4";
+import vidTest3 from "@/assets/Videos/Testimonial/InShot_20260122_160336182.mp4";
+import vidTest4 from "@/assets/Videos/Testimonial/InShot_20260122_160832138.mp4";
+
 import { Link } from "wouter";
+
+
+
 import { useRef, useState } from "react";
 
 export default function HomePage() {
@@ -57,10 +67,10 @@ export default function HomePage() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <span className="text-secondary font-display font-bold tracking-[0.3em] uppercase text-xs mb-8 block">
+                  <span className="text-secondary font-display font-bold tracking-wider uppercase text-xs mb-8 block">
                     Established 2015 — Chennai
                   </span>
-                  <h1 className="text-[clamp(3rem,10vw,8rem)] font-display font-bold text-white mb-8 leading-[0.85] tracking-tighter uppercase">
+                  <h1 className="text-[clamp(3rem,10vw,8rem)] font-display font-bold text-white mb-8 leading-[0.85] tracking-normal uppercase">
                     Architecture<br />
                     <span className="text-transparent border-t-2 border-white/20 pt-4 inline-block w-full" style={{ WebkitTextStroke: '1px white' }}>
                       Is a language
@@ -78,7 +88,7 @@ export default function HomePage() {
                     We translate complex visions into monolithic structures that define the modern skyline of South India.
                   </p>
                   <div className="flex gap-6">
-                    <Button asChild variant="link" className="text-white group p-0 h-auto text-sm tracking-widest uppercase">
+                    <Button asChild variant="link" className="text-white group p-0 h-auto text-sm tracking-wider uppercase">
                       <Link href="/portfolio" className="flex items-center gap-3">
                         Our Work <MoveRight className="group-hover:translate-x-2 transition-transform" />
                       </Link>
@@ -91,7 +101,7 @@ export default function HomePage() {
 
           {/* Large Vertical Text */}
           <div className="absolute top-1/2 right-0 -translate-y-1/2 rotate-90 translate-x-1/2 hidden xl:block">
-            <span className="text-[12rem] font-display font-black text-white/[0.03] uppercase whitespace-nowrap tracking-tighter">
+            <span className="text-[12rem] font-display font-black text-white/[0.03] uppercase whitespace-nowrap tracking-normal">
               NKC BUILDERS
             </span>
           </div>
@@ -111,11 +121,11 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <span className="text-secondary font-display font-bold tracking-widest text-sm uppercase block mb-4">Legacy</span>
+                <span className="text-secondary font-display font-bold tracking-wider text-sm uppercase block mb-4">Legacy</span>
                 <div className="text-6xl md:text-7xl font-display font-light text-primary mb-2 flex items-baseline justify-center md:justify-start">
                   18<span className="text-4xl text-secondary ml-1 font-bold">+</span>
                 </div>
-                <div className="text-muted-foreground uppercase tracking-widest text-xs font-bold mt-4 border-t border-primary/10 pt-4 group-hover:border-secondary transition-colors duration-500">
+                <div className="text-muted-foreground uppercase tracking-wider text-xs font-bold mt-4 border-t border-primary/10 pt-4 group-hover:border-secondary transition-colors duration-500">
                   Years of Excellence Since 2007
                 </div>
               </motion.div>
@@ -127,11 +137,11 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <span className="text-secondary font-display font-bold tracking-widest text-sm uppercase block mb-4">Capacity</span>
+                <span className="text-secondary font-display font-bold tracking-wider text-sm uppercase block mb-4">Capacity</span>
                 <div className="text-6xl md:text-7xl font-display font-light text-primary mb-2 flex items-baseline justify-center md:justify-start">
                   1 L<span className="text-4xl text-secondary ml-1 font-bold">+</span>
                 </div>
-                <div className="text-muted-foreground uppercase tracking-widest text-xs font-bold mt-4 border-t border-primary/10 pt-4 group-hover:border-secondary transition-colors duration-500">
+                <div className="text-muted-foreground uppercase tracking-wider text-xs font-bold mt-4 border-t border-primary/10 pt-4 group-hover:border-secondary transition-colors duration-500">
                   Sq. Ft. Delivery Capacity & Assets
                 </div>
               </motion.div>
@@ -143,11 +153,11 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <span className="text-secondary font-display font-bold tracking-widest text-sm uppercase block mb-4">Trust</span>
+                <span className="text-secondary font-display font-bold tracking-wider text-sm uppercase block mb-4">Trust</span>
                 <div className="text-6xl md:text-7xl font-display font-light text-primary mb-2 flex items-baseline justify-center md:justify-start">
                   400<span className="text-4xl text-secondary ml-1 font-bold">+</span>
                 </div>
-                <div className="text-muted-foreground uppercase tracking-widest text-xs font-bold mt-4 border-t border-primary/10 pt-4 group-hover:border-secondary transition-colors duration-500">
+                <div className="text-muted-foreground uppercase tracking-wider text-xs font-bold mt-4 border-t border-primary/10 pt-4 group-hover:border-secondary transition-colors duration-500">
                   Successful Clients Throughout TN
                 </div>
               </motion.div>
@@ -171,13 +181,13 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-primary/20 mix-blend-color" />
                 </div>
                 <div className="flex flex-col justify-center space-y-10">
-                  <p className="text-2xl text-muted-foreground leading-relaxed font-light">
+                  <p className="text-2xl text-primary/90 leading-relaxed">
                     Our philosophy is rooted in the intersection of structural engineering and artistic expression. Every slab poured and every beam placed is a testament to our dedication to the craft.
                   </p>
-                  <p className="text-lg text-muted-foreground/80 leading-relaxed">
+                  <p className="text-lg text-primary/80 leading-relaxed">
                     With over a decade of shaping the Tamil Nadu skyline, we have engineered infrastructure that withstands the test of time, marrying brutalist functionality with elegant aesthetics.
                   </p>
-                  <Button asChild variant="outline" className="w-max rounded-none border-primary text-primary hover:bg-primary hover:text-white uppercase tracking-widest text-xs px-8 h-14">
+                  <Button asChild variant="outline" className="w-max rounded-none border-primary text-primary hover:bg-primary hover:text-white uppercase tracking-wider text-xs px-8 h-14">
                     <Link href="/about">Discover Our Legacy</Link>
                   </Button>
                 </div>
@@ -194,15 +204,15 @@ export default function HomePage() {
           <div className="container mx-auto px-6 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20 border-b border-white/10 pb-12">
               <div>
-                <span className="text-secondary font-display font-bold tracking-widest uppercase text-sm mb-4 block flex items-center gap-3">
+                <span className="text-secondary font-display font-bold tracking-wider uppercase text-sm mb-4 block flex items-center gap-3">
                   <MapPin size={16} /> Operational Footprint
                 </span>
-                <h2 className="text-5xl md:text-7xl font-display font-bold leading-none tracking-tighter">
+                <h2 className="text-5xl md:text-7xl font-display font-bold leading-none tracking-normal">
                   Territorial<br />
                   <span className="text-transparent" style={{ WebkitTextStroke: '1px white' }}>Dominance</span>
                 </h2>
               </div>
-              <p className="max-w-md text-white/50 text-right hidden md:block text-lg font-light leading-relaxed">
+              <p className="max-w-md text-white/90 text-right hidden md:block text-lg leading-relaxed">
                 From our roots in Ramanathapuram to active construction sites spanning the entirety of Tamil Nadu.
               </p>
             </div>
@@ -216,7 +226,7 @@ export default function HomePage() {
               >
                 <div className="text-secondary mb-8 block font-display text-4xl font-light">01</div>
                 <h3 className="text-2xl font-display font-bold mb-4 flex items-center gap-3"><Home className="text-secondary w-6 h-6" /> Genesis</h3>
-                <p className="text-white/60 leading-relaxed font-light">Our journey began in and around Ramanathapuram, laying the unbreakable foundation of NKC Builders.</p>
+                <p className="text-white/90 leading-relaxed font-normal">Our journey began in and around Ramanathapuram, laying the unbreakable foundation of NKC Builders.</p>
               </motion.div>
 
               <motion.div
@@ -228,7 +238,7 @@ export default function HomePage() {
               >
                 <div className="text-secondary mb-8 block font-display text-4xl font-light">02</div>
                 <h3 className="text-2xl font-display font-bold mb-4 flex items-center gap-3"><TrendingUp className="text-secondary w-6 h-6" /> Expansion</h3>
-                <p className="text-white/60 leading-relaxed font-light">Strategic growth extending operations into Sivagangai, Rajapalayam, Madurai, Dindigul, and Coimbatore.</p>
+                <p className="text-white/90 leading-relaxed font-normal">Strategic growth extending operations into Sivagangai, Rajapalayam, Madurai, Dindigul, and Coimbatore.</p>
               </motion.div>
 
               <motion.div
@@ -244,7 +254,7 @@ export default function HomePage() {
                 <div className="relative z-10">
                   <div className="text-secondary mb-8 block font-display text-4xl font-light">03</div>
                   <h3 className="text-2xl font-display font-bold mb-4 text-white">Current Reach</h3>
-                  <p className="text-white/80 leading-relaxed font-light">Fully equipped with a massive 1 Lakh sq. ft. capacity, undertaking high-value projects across Chennai and the entirety of Tamil Nadu.</p>
+                  <p className="text-white/90 leading-relaxed font-normal">Fully equipped with a massive 1 Lakh sq. ft. capacity, undertaking high-value projects across Chennai and the entirety of Tamil Nadu.</p>
                 </div>
               </motion.div>
             </div>
@@ -258,7 +268,7 @@ export default function HomePage() {
               <h2 className="text-6xl md:text-8xl font-display font-bold text-primary uppercase leading-none">
                 Core<br />Domain
               </h2>
-              <p className="max-w-xs text-muted-foreground text-sm uppercase tracking-widest leading-loose">
+              <p className="max-w-sm text-muted-foreground text-base uppercase tracking-wider leading-loose">
                 Specialized in high-density commercial developments and bespoke residential enclaves.
               </p>
             </div>
@@ -267,19 +277,19 @@ export default function HomePage() {
               <div className="p-12 md:border-r border-primary/10 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-default">
                 <span className="text-secondary font-display font-bold mb-10 block">01/</span>
                 <h3 className="text-4xl font-display font-bold mb-6">Residential</h3>
-                <p className="text-sm opacity-60 mb-10 leading-loose group-hover:opacity-80">Bespoke living environments crafted with artisanal precision and modern engineering.</p>
+                <p className="text-lg font-medium opacity-80 mb-10 leading-loose group-hover:opacity-100">Bespoke living environments crafted with artisanal precision and modern engineering.</p>
                 <ArrowRight className="group-hover:translate-x-4 transition-transform text-secondary" />
               </div>
               <div className="p-12 md:border-r border-primary/10 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-default">
                 <span className="text-secondary font-display font-bold mb-10 block">02/</span>
                 <h3 className="text-4xl font-display font-bold mb-6">Commercial</h3>
-                <p className="text-sm opacity-60 mb-10 leading-loose group-hover:opacity-80">Scalable infrastructure designed for the future of enterprise and retail.</p>
+                <p className="text-lg font-medium opacity-80 mb-10 leading-loose group-hover:opacity-100">Scalable infrastructure designed for the future of enterprise and retail.</p>
                 <ArrowRight className="group-hover:translate-x-4 transition-transform text-secondary" />
               </div>
               <div className="p-12 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-default">
                 <span className="text-secondary font-display font-bold mb-10 block">03/</span>
                 <h3 className="text-4xl font-display font-bold mb-6">Interiors</h3>
-                <p className="text-sm opacity-60 mb-10 leading-loose group-hover:opacity-80">Turnkey interior ecosystems that harmonize aesthetics with spatial functionality.</p>
+                <p className="text-lg font-medium opacity-80 mb-10 leading-loose group-hover:opacity-100">Turnkey interior ecosystems that harmonize aesthetics with spatial functionality.</p>
                 <ArrowRight className="group-hover:translate-x-4 transition-transform text-secondary" />
               </div>
             </div>
@@ -294,9 +304,9 @@ export default function HomePage() {
                 style={{ opacity: fadeOpacity }}
                 className="max-w-2xl"
               >
-                <h2 className="text-2xl font-display font-bold tracking-widest uppercase mb-4">Masterpieces</h2>
-                <div className="w-full h-px bg-primary/10 mb-4" />
-                <p className="text-muted-foreground">Scroll to explore our defining structures.</p>
+                <h2 className="text-3xl font-display font-bold tracking-wider uppercase mb-4">Masterpieces</h2>
+                <div className="w-full h-px bg-primary/10 mb-6" />
+                <p className="text-muted-foreground text-lg">Scroll to explore our defining structures.</p>
               </motion.div>
             </div>
 
@@ -322,7 +332,7 @@ export default function HomePage() {
                   <div className="flex justify-between items-end border-b border-primary/10 pb-4">
                     <div>
                       <h3 className="text-4xl md:text-5xl font-display font-bold uppercase mb-2 text-primary">{p.title}</h3>
-                      <span className="text-sm uppercase tracking-widest text-muted-foreground">{p.cat} — 2024</span>
+                      <span className="text-sm uppercase tracking-wider text-muted-foreground">{p.cat} — 2024</span>
                     </div>
                     <div className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
                       <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
@@ -334,13 +344,96 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Video Testimonials Showcase - Interactive Bento Grid */}
+        <section className="py-32 bg-white overflow-hidden">
+          <div className="container mx-auto px-6 mb-20">
+            <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-w-2xl"
+              >
+                <span className="text-secondary font-display font-bold tracking-wider uppercase text-xs mb-4 block">
+                  Documented Excellence
+                </span>
+                <h2 className="text-5xl md:text-8xl font-display font-bold text-primary uppercase leading-[0.9] tracking-normal">
+                  Client<br /><span className="text-transparent" style={{ WebkitTextStroke: '1px #0f172a' }}>Stories</span>
+                </h2>
+              </motion.div>
+              <p className="max-w-xs text-muted-foreground text-xs uppercase tracking-wider leading-loose text-right hidden lg:block">
+                Witness the transformation journeys of our clients through interactive visual narratives.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { vid: vidTest1 },
+                { vid: vidTest2 },
+                { vid: vidTest3 },
+                { vid: vidTest4 },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="group relative bg-primary overflow-hidden border border-primary/5 rounded-sm shadow-2xl aspect-[9/16]"
+                  onMouseEnter={(e) => {
+                    const video = e.currentTarget.querySelector('video');
+                    if (video) {
+                      video.muted = false; // Unmute on hover
+                      video.play().catch(() => {
+                        // Fallback if browser blocks unmuted auto-play without prior click
+                        video.muted = true;
+                        video.play().catch(() => { });
+                      });
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    const video = e.currentTarget.querySelector('video');
+                    if (video) {
+                      video.pause();
+                      video.muted = true; // Mute again on leave
+                      video.currentTime = 0;
+                    }
+                  }}
+                >
+                  <video
+                    src={item.vid}
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    loop
+                    muted
+                    playsInline
+
+                    preload="metadata"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
+                  <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none translate-y-4 group-hover:translate-y-0">
+                    <span className="text-secondary font-display font-bold tracking-wider text-[10px] uppercase mb-1 block">Story {i + 1}</span>
+                    <p className="text-white font-display font-bold text-lg uppercase tracking-normal italic leading-none">Client Experience</p>
+                  </div>
+                  {/* Play Icon Placeholder */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:opacity-0 group-hover:scale-150 transition-all duration-500 pointer-events-none">
+                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[15px] border-l-white border-b-[10px] border-b-transparent ml-1" />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
         {/* Testimonials Section - Single Item Carousel */}
         <section className="py-32 mb-24 bg-primary text-white relative overflow-hidden">
+
+
           <div className="absolute inset-0 bg-[url('/src/assets/images/texture-abstract.png')] opacity-10 mix-blend-overlay bg-cover bg-center" />
           <div className="container mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-4">
-                <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-6 block">Client Perspectives</span>
+                <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-6 block">Client Perspectives</span>
                 <h2 className="text-4xl md:text-5xl font-display font-bold leading-tight mb-8">
                   Trusted by <br /><span className="text-secondary">Visionaries</span>
                 </h2>
@@ -425,7 +518,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="container mx-auto px-6 relative z-10"
           >
-            <h2 className="text-[clamp(2.5rem,8vw,6rem)] font-display font-bold leading-none mb-12 uppercase tracking-tighter">
+            <h2 className="text-[clamp(2.5rem,8vw,6rem)] font-display font-bold leading-none mb-12 uppercase tracking-normal">
               Let's craft the<br />
               <span className="text-secondary">Next Landmark</span>
             </h2>

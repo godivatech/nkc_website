@@ -296,7 +296,7 @@ export default function PortfolioPage() {
       <div className="bg-primary pt-32 pb-20 text-white">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">Our Masterpieces</h1>
-          <p className="text-xl text-white/60 max-w-2xl mx-auto mb-12">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-12">
             Explore our diverse portfolio of residential, commercial, and interior projects delivered with excellence.
           </p>
 

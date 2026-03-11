@@ -52,7 +52,7 @@ export function Navbar() {
           {navLinks.map((link) => (
             <Link key={link.name} href={link.href}
               className={cn(
-                "text-sm font-medium tracking-wide hover:text-secondary transition-colors",
+                "text-base font-medium tracking-wide hover:text-secondary transition-colors",
                 scrolled ? "text-primary" : "text-white/90",
                 location === link.href && "text-secondary font-semibold"
               )}

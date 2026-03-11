@@ -33,7 +33,7 @@ export function StatsCounter({ end, suffix = "", label }: StatsCounterProps) {
       <h3 className="text-4xl md:text-5xl font-display font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
         {count}{suffix}
       </h3>
-      <p className="text-muted-foreground uppercase tracking-widest text-xs font-semibold">{label}</p>
+      <p className="text-muted-foreground uppercase tracking-wider text-xs font-semibold">{label}</p>
     </div>
   );
 }

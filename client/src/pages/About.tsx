@@ -49,7 +49,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Our Story</span>
+              <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-4 block">Our Story</span>
               <h2 className="text-4xl font-display font-bold text-primary mb-6">Delivering High-Quality Solutions</h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                 Known for delivering high-quality, innovative, and sustainable building solutions. With decades of experience, we have successfully completed projects across a wide range of sectors, including residential, commercial, industrial, and infrastructure.
@@ -100,7 +100,7 @@ export default function AboutPage() {
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-[1px] bg-secondary" />
-                <span className="text-secondary font-bold tracking-[0.3em] uppercase text-sm">Our Vision</span>
+                <span className="text-secondary font-bold tracking-wider uppercase text-sm">Our Vision</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-display font-bold leading-tight">
                 Shaping the <span className="text-secondary">Future</span> of Construction
@@ -119,7 +119,7 @@ export default function AboutPage() {
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-[1px] bg-secondary" />
-                <span className="text-secondary font-bold tracking-[0.3em] uppercase text-sm">Our Mission</span>
+                <span className="text-secondary font-bold tracking-wider uppercase text-sm">Our Mission</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-display font-bold leading-tight">
                 Built on <span className="italic font-normal">Integrity</span> & Precision
@@ -163,14 +163,14 @@ export default function AboutPage() {
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-[1px] bg-secondary" />
-                <span className="text-secondary font-bold tracking-[0.3em] uppercase text-sm">Founder's Message</span>
+                <span className="text-secondary font-bold tracking-wider uppercase text-sm">Founder's Message</span>
               </div>
 
               <h2 className="text-4xl md:text-5xl font-display font-bold text-primary leading-tight">
                 "Architecture is a language, and every structure we build tells a <span className="text-secondary italic font-light">story of trust</span>."
               </h2>
 
-              <div className="space-y-6 text-muted-foreground text-lg leading-relaxed font-light">
+              <div className="space-y-6 text-primary/90 text-lg leading-relaxed">
                 <p>
                   At NKC Builders, we don't just construct buildings — we build homes where families grow, businesses thrive, and dreams become reality. With over 18 years of experience, our commitment to quality craftsmanship and honest relationships has been the foundation of everything we do.
                 </p>
@@ -181,10 +181,10 @@ export default function AboutPage() {
 
               <div className="pt-8 mt-8 border-t border-primary/10">
                 <h4 className="text-2xl font-display font-bold text-primary">Mr. NK. Chandrasoodan</h4>
-                <p className="text-secondary tracking-widest uppercase text-sm font-bold mt-1">Founder & Managing Director</p>
+                <p className="text-secondary tracking-wider uppercase text-sm font-bold mt-1">Founder & Managing Director</p>
                 {/* Optional signature placeholder */}
-                <div className="mt-6 opacity-30">
-                  <span className="font-display text-4xl italic tracking-widest">NK. Chandrasoodan</span>
+                <div className="mt-6 opacity-60">
+                  <span className="font-display text-4xl italic tracking-wider">NK. Chandrasoodan</span>
                 </div>
               </div>
             </motion.div>
@@ -196,7 +196,7 @@ export default function AboutPage() {
       <section className="py-24 bg-zinc-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Testimonials</span>
+            <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-4 block">Testimonials</span>
             <h2 className="text-4xl font-display font-bold text-primary">Client Perspectives</h2>
           </div>
 
@@ -235,7 +235,7 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-display font-bold text-primary mb-2 uppercase tracking-wide">{t.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed italic">"{t.text}"</p>
+                  <p className="text-primary/80 leading-relaxed italic">"{t.text}"</p>
                 </div>
                 <div className="flex items-center gap-4 pt-6 border-t border-primary/5">
                   <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">
@@ -259,7 +259,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
             <div>
-              <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Our People</span>
+              <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-4 block">Our People</span>
               <h2 className="text-4xl font-display font-bold text-primary">Leadership Team</h2>
             </div>
             <p className="text-muted-foreground max-w-sm text-right hidden md:block">The minds behind our finest creations.</p>
@@ -288,7 +288,7 @@ export default function AboutPage() {
                     <h3 className={`text-xl md:text-2xl font-display font-bold transition-colors duration-300 ${activeMember === i ? 'text-primary' : 'text-primary/40 group-hover:text-primary/70'}`}>
                       {member.name}
                     </h3>
-                    <p className={`text-xs uppercase tracking-widest font-medium mt-1 transition-all duration-300 ${activeMember === i ? 'text-secondary opacity-100 translate-y-0' : 'text-primary/0 opacity-0 -translate-y-2 group-hover:text-primary/40 group-hover:opacity-100 group-hover:translate-y-0'}`}>
+                    <p className={`text-xs uppercase tracking-wider font-medium mt-1 transition-all duration-300 ${activeMember === i ? 'text-secondary opacity-100 translate-y-0' : 'text-primary/0 opacity-0 -translate-y-2 group-hover:text-primary/40 group-hover:opacity-100 group-hover:translate-y-0'}`}>
                       {member.role}
                     </p>
                   </div>
@@ -332,7 +332,7 @@ export default function AboutPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-secondary font-bold tracking-widest uppercase text-sm mb-2"
+                            className="text-secondary font-bold tracking-wider uppercase text-sm mb-2"
                           >
                             {member.role}
                           </motion.p>
@@ -360,7 +360,7 @@ export default function AboutPage() {
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Our Reach & Capabilities</span>
+            <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-4 block">Our Reach & Capabilities</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-primary">Building Across Tamil Nadu</h2>
           </div>
 
@@ -417,13 +417,13 @@ export default function AboutPage() {
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-12 h-[1px] bg-secondary" />
-                    <span className="text-secondary font-bold tracking-[0.2em] uppercase text-sm">Capacity & Assets</span>
+                    <span className="text-secondary font-bold tracking-wider uppercase text-sm">Capacity & Assets</span>
                   </div>
 
                   <h3 className="text-3xl md:text-4xl font-display font-light leading-snug mb-8">
                     Equipped to handle projects up to <br />
                     <span className="text-secondary font-bold text-5xl md:text-6xl block mt-4 mb-2">1 Lakh</span>
-                    <span className="text-secondary/80 font-medium text-xl tracking-widest uppercase">sq. ft. built-up area</span>
+                    <span className="text-secondary/80 font-medium text-xl tracking-wider uppercase">sq. ft. built-up area</span>
                   </h3>
 
                   <p className="text-white/70 text-lg font-light leading-relaxed max-w-sm">

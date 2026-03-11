@@ -44,7 +44,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Head Office</h4>
-                  <p className="text-muted-foreground text-sm">3/6, Muniyasamy kovil st.,<br />Ramnad-623501</p>
+                  <p className="text-primary/90 text-base">3/6, Muniyasamy kovil st.,<br />Ramnad-623501</p>
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Phone</h4>
-                  <p className="text-muted-foreground text-sm">+91 04567 220895<br />+91 94431 26608</p>
+                  <p className="text-primary/90 text-base">+91 04567 220895<br />+91 94431 26608</p>
                 </div>
               </div>
 
@@ -64,7 +64,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Email</h4>
-                  <p className="text-muted-foreground text-sm">nkchandrasoodan@gmail.com</p>
+                  <p className="text-primary/90 text-base">nkchandrasoodan@gmail.com</p>
                 </div>
               </div>
 
@@ -74,7 +74,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Working Hours</h4>
-                  <p className="text-muted-foreground text-sm">Mon - Sat: 8:00 AM - 8:00 PM<br />Sunday: Closed</p>
+                  <p className="text-primary/90 text-base">Mon - Sat: 8:00 AM - 8:00 PM<br />Sunday: Closed</p>
                 </div>
               </div>
 
@@ -86,14 +86,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">Active Service Areas</h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <p className="text-primary/90 text-base leading-relaxed">
                       We handle projects across Tamil Nadu, with major operations currently in:
                     </p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2 pl-14">
                   {['Ramanathapuram', 'Sivagangai', 'Madurai', 'Coimbatore', 'Chennai', 'Dindigul', 'Rajapalayam'].map((city) => (
-                    <span key={city} className="text-xs font-medium bg-muted text-muted-foreground px-3 py-1 border border-border">
+                    <span key={city} className="text-sm font-medium bg-muted text-primary/80 px-3 py-1 border border-border">
                       {city}
                     </span>
                   ))}
@@ -109,18 +109,18 @@ export default function ContactPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" placeholder="John Doe" required className="rounded-none h-12" />
+                  <Input id="name" placeholder="Enter your full name" required className="rounded-none h-12" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" required className="rounded-none h-12" />
+                  <Input id="email" type="email" placeholder="Enter your email address" required className="rounded-none h-12" />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" placeholder="+91 98765 43210" className="rounded-none h-12" />
+                  <Input id="phone" placeholder="Enter your phone number" className="rounded-none h-12" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="type">Project Type</Label>
@@ -154,7 +154,7 @@ export default function ContactPage() {
 
               <div className="space-y-2">
                 <Label htmlFor="message">Project Details</Label>
-                <Textarea id="message" placeholder="Tell us about your project requirements..." className="rounded-none min-h-[150px]" />
+                <Textarea id="message" placeholder="Enter your project details..." className="rounded-none min-h-[150px]" />
               </div>
 
               <Button type="submit" size="lg" className="w-full md:w-auto rounded-none px-12 bg-secondary hover:bg-secondary/90 text-white">

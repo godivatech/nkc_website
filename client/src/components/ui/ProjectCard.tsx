@@ -47,7 +47,7 @@ export function ProjectCard({ image, title, location, category, description, yea
             <div className="absolute inset-0 p-8 flex flex-col justify-end text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
               <span className="text-secondary text-sm font-medium uppercase tracking-wider mb-2">{type || category}</span>
               <h3 className="text-2xl font-display font-bold mb-1">{title}</h3>
-              <p className="text-white/80 text-sm mb-4 flex items-center gap-2">{location}</p>
+              <p className="text-white text-base mb-4 flex items-center gap-2">{location}</p>
               <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
                 <ArrowUpRight size={20} />
               </div>
@@ -82,24 +82,24 @@ export function ProjectCard({ image, title, location, category, description, yea
             </div>
             <ScrollArea className="h-[50vh] md:h-full max-h-[90vh]">
               <div className="p-6 md:p-10 flex flex-col justify-center">
-                <span className="text-secondary text-sm font-bold uppercase tracking-widest mb-4">{category}</span>
+                <span className="text-secondary text-sm font-bold uppercase tracking-wider mb-4">{category}</span>
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-2">{title}</h2>
-                <p className="text-muted-foreground mb-6">{location}</p>
-                <p className="text-primary/80 leading-relaxed mb-8">
+                <p className="text-primary/90 text-lg mb-6">{location}</p>
+                <p className="text-primary text-lg leading-relaxed mb-8">
                   {description}
                 </p>
-                <div className="grid grid-cols-2 gap-4 text-sm mb-8">
+                <div className="grid grid-cols-2 gap-4 text-base mb-8">
                   <div>
-                    <span className="block text-muted-foreground mb-1">Year</span>
+                    <span className="block text-primary/70 mb-1">Year</span>
                     <span className="font-semibold text-primary">{year || "2024"}</span>
                   </div>
                   <div>
-                    <span className="block text-muted-foreground mb-1">Status</span>
+                    <span className="block text-primary/70 mb-1">Status</span>
                     <span className="font-semibold text-primary">{status || "Completed"}</span>
                   </div>
                   {type && (
                     <div className="col-span-2">
-                      <span className="block text-muted-foreground mb-1">Project Type</span>
+                      <span className="block text-primary/70 mb-1">Project Type</span>
                       <span className="font-semibold text-primary">{type}</span>
                     </div>
                   )}
@@ -108,7 +108,7 @@ export function ProjectCard({ image, title, location, category, description, yea
                 {/* Gallery Grid */}
                 {gallery && gallery.length > 0 && (
                   <div>
-                    <h4 className="text-sm font-bold uppercase tracking-widest mb-4 text-primary">Gallery</h4>
+                    <h4 className="text-sm font-bold uppercase tracking-wider mb-4 text-primary">Gallery</h4>
                     <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
                       {/* Main Image Thumbnail */}
                       <div
