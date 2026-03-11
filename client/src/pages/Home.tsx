@@ -12,11 +12,16 @@ import imgSrimethila from "@/assets/images/Projects/Srimethila Hotel/Main.webp";
 import imgVKT from "@/assets/images/Projects/VKT Commercial Complex/Main.webp";
 import abstractTexture from "@/assets/images/texture-abstract.png";
 
-// Video Testimonials
-import vidTest1 from "@/assets/Videos/Testimonial/InShot_20260122_154804678.mp4";
-import vidTest2 from "@/assets/Videos/Testimonial/InShot_20260122_155805982.mp4";
-import vidTest3 from "@/assets/Videos/Testimonial/InShot_20260122_160336182.mp4";
-import vidTest4 from "@/assets/Videos/Testimonial/InShot_20260122_160832138.mp4";
+// ─────────────────────────────────────────────────────────────────────────────
+// Testimonial Video URLs (Cloudinary)
+// Folder: nkc-builders-website/testimonials/
+// Upload your videos to Cloudinary and replace these placeholders with the
+// actual delivery URLs. Format: https://res.cloudinary.com/<cloud>/video/upload/<public_id>
+// ─────────────────────────────────────────────────────────────────────────────
+const vidTest1 = "https://res.cloudinary.com/godivatech/video/upload/nkc-builders-website/testimonials/testimonial-1.mp4";
+const vidTest2 = "https://res.cloudinary.com/godivatech/video/upload/nkc-builders-website/testimonials/testimonial-2.mp4";
+const vidTest3 = "https://res.cloudinary.com/godivatech/video/upload/nkc-builders-website/testimonials/testimonial-3.mp4";
+const vidTest4 = "https://res.cloudinary.com/godivatech/video/upload/nkc-builders-website/testimonials/testimonial-4.mp4";
 
 import { Link } from "wouter";
 
