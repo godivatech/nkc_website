@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Check, Users, Leaf, ShieldCheck, Linkedin, ArrowRight, MapPin, Target, Building2, TrendingUp } from "lucide-react";
 import teamImg from "@/assets/images/about-team.png";
-import imgFounder from "@/assets/images/Team/MR. NK. Chandrasoodan-Architect Founder.webp";
+import imgFounder from "@/assets/images/Team/Profile.jpg";
 import imgPravin from "@/assets/images/Team/Ar. Pravin kumar-Senior Architect.webp";
 import imgRamesh from "@/assets/images/Team/MR. Ramesh Kannan-Project Manager.webp";
 import imgSaranya from "@/assets/images/Team/MRS. Saranya-Purchase Manager.webp";
