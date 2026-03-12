@@ -75,7 +75,7 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-muted relative z-10 border-8 border-white shadow-2xl">
-                <img src={teamImg} alt="Office" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                <img src={teamImg} alt="Office" className="w-full h-full object-cover transition-all duration-500" />
               </div>
               <div className="absolute -bottom-10 -right-10 w-2/3 h-2/3 bg-secondary/10 -z-0" />
               <div className="absolute -top-10 -left-10 w-1/2 h-1/2 bg-primary/5 -z-0" />
@@ -148,7 +148,7 @@ export default function AboutPage() {
                 <img
                   src={imgFounder}
                   alt="Mr. NK. Chandrasoodan - Founder"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-700"
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 w-2/3 h-2/3 border-l-2 border-b-2 border-primary/10 -z-0" />

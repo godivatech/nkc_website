@@ -222,7 +222,7 @@ export default function HomePage() {
             <img
               src={heroBg}
               alt="Construction Site"
-              className="w-full h-full object-cover grayscale brightness-50"
+              className="w-full h-full object-cover brightness-50"
             />
             <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
           </motion.div>
@@ -345,8 +345,7 @@ export default function HomePage() {
 
               <div className="grid md:grid-cols-2 gap-20">
                 <div className="aspect-[4/5] bg-muted relative group overflow-hidden">
-                  <img src={abstractTexture} alt="Texture" className="w-full h-full object-cover grayscale opacity-80 group-hover:scale-110 transition-transform duration-1000" />
-                  <div className="absolute inset-0 bg-primary/20 mix-blend-color" />
+                  <img src={abstractTexture} alt="Texture" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
                 </div>
                 <div className="flex flex-col justify-center space-y-10">
                   <p className="text-2xl text-primary/90 leading-relaxed">
