@@ -576,11 +576,11 @@ export default function HomePage() {
                     <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-md px-4 py-2 text-white font-display text-sm border border-white/20 z-10">
                       {p.id}
                     </div>
-                    <img 
-                      src={getOptimizedImageUrl(p.img, { width: 1200, height: 675, crop: 'fill' })} 
-                      alt={p.title} 
+                    <img
+                      src={getOptimizedImageUrl(p.img, { width: 1200, height: 675, crop: 'fill' })}
+                      alt={p.title}
                       loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>

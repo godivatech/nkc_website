@@ -315,11 +315,11 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">Our Masterpieces</h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-12">
-            Explore our diverse portfolio of residential, commercial, and interior projects delivered with excellence.
+            Explore our diverse portfolio of residential and commercial projects delivered with excellence.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            {["All", "Residential", "Commercial", "Interiors"].map(cat => (
+            {["All", "Residential", "Commercial"].map(cat => (
               <Button
                 key={cat}
                 onClick={() => setFilter(cat)}
