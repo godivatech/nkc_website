@@ -6,6 +6,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { ArrowRight, Building2, Home, PaintBucket, MoveRight, MapPin, Target, TrendingUp } from "lucide-react";
 // import heroBg from "@/assets/images/hero-bg.png";
 import abstractTexture from "@/assets/images/texture-abstract.png";
+import { getOptimizedImageUrl } from "../lib/cloudinary";
+import cloudinaryData from "../data/cloudinary_images.json";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Cloudinary Slider Image URLs
@@ -24,13 +26,12 @@ const sliderImages = {
 // Upload your videos to Cloudinary and replace these placeholders with the
 // actual delivery URLs. Format: https://res.cloudinary.com/<cloud>/video/upload/<public_id>
 // ─────────────────────────────────────────────────────────────────────────────
-const vidTest1 = "https://res.cloudinary.com/doeodacsg/video/upload/f_auto,q_auto,w_800/v1773220411/nkc-builders-website/testimonials/testimonial-1.mp4";
-const vidTest2 = "https://res.cloudinary.com/doeodacsg/video/upload/f_auto,q_auto,w_800/v1773221238/InShot_20260122_160832138_abp07g.mp4";
-const vidTest3 = "https://res.cloudinary.com/doeodacsg/video/upload/f_auto,q_auto,w_800/v1773221127/InShot_20260122_160336182_gd8a39.mp4";
-const vidTest4 = "https://res.cloudinary.com/doeodacsg/video/upload/f_auto,q_auto,w_800/v1773222180/InShot_20260122_155805982_m6a7sq.mp4";
+const vidTest1 = getOptimizedImageUrl("https://res.cloudinary.com/doeodacsg/video/upload/v1773220411/nkc-builders-website/testimonials/testimonial-1.mp4", { width: 800 });
+const vidTest2 = getOptimizedImageUrl("https://res.cloudinary.com/doeodacsg/video/upload/v1773220411/nkc-builders-website/testimonials/testimonial-2.mp4", { width: 800 });
+const vidTest3 = getOptimizedImageUrl("https://res.cloudinary.com/doeodacsg/video/upload/v1773220412/nkc-builders-website/testimonials/testimonial-3.mp4", { width: 800 });
+const vidTest4 = getOptimizedImageUrl("https://res.cloudinary.com/doeodacsg/video/upload/v1773220412/nkc-builders-website/testimonials/testimonial-4.mp4", { width: 800 });
 
 import { Link } from "wouter";
-import { getOptimizedImageUrl } from "@/lib/cloudinary";
 
 
 
@@ -221,6 +222,71 @@ export default function HomePage() {
   const x = useTransform(horizontalScrollY, [0.1, 0.9], ["50%", "-95%"]);
   const fadeOpacity = useTransform(horizontalScrollY, [0.8, 0.9], [1, 0]);
 
+  const heroBg = getOptimizedImageUrl(cloudinaryData.hero.background);
+
+  const serviceSlider = [
+    {
+      title: "Anandam Palace",
+      image: getOptimizedImageUrl(cloudinaryData.slider["Anandam Palace.png"]),
+      location: "Rajapalayam"
+    },
+    {
+      title: "Anantham Office",
+      image: getOptimizedImageUrl(cloudinaryData.slider["Anantham Office.png"]),
+      location: "Rajapalayam"
+    },
+    {
+      title: "Awinco Badminton Court",
+      image: getOptimizedImageUrl(cloudinaryData.slider["Awinco Badminton Court.png"]),
+      location: "Sivakasi"
+    },
+    {
+      title: "Javith Residence",
+      image: getOptimizedImageUrl(cloudinaryData.slider["Javith Residence.png"]),
+      location: "Peeriyapattinam"
+    },
+    {
+      title: "Jeyam Bridal fashion studio",
+      image: getOptimizedImageUrl(cloudinaryData.slider["Jeyam Bridal fashion studio.png"]),
+      location: "Rajapalayam"
+    },
+    {
+      title: "JSK mahal",
+      image: getOptimizedImageUrl(cloudinaryData.slider["JSK mahal.png"]),
+      location: "Pudukottai"
+    },
+    {
+      title: "JSK Residence",
+      image: getOptimizedImageUrl(cloudinaryData.slider["JSK Residence.png"]),
+      location: "Pudukottai"
+    },
+    {
+      title: "Karupusamy Residence",
+      image: getOptimizedImageUrl(cloudinaryData.slider["Karupusamy Residence.png"]),
+      location: "Rajapalayam"
+    },
+    {
+      title: "Peeriyapattinam Mosque",
+      image: getOptimizedImageUrl(cloudinaryData.slider["Peeriyapattinam Mosque.png"]),
+      location: "Peeriyapattinam"
+    },
+    {
+      title: "Sivagangai Mosque",
+      image: getOptimizedImageUrl(cloudinaryData.slider["Sivagangai Mosque.png"]),
+      location: "Sivagangai"
+    },
+    {
+      title: "Srimethila Hotel",
+      image: getOptimizedImageUrl(cloudinaryData.slider["Srimethila Hotel.png"]),
+      location: "Rajapalayam"
+    },
+    {
+      title: "VKT Commercial",
+      image: getOptimizedImageUrl(cloudinaryData.slider["VKT Commercial.png"]),
+      location: "Rajapalayam"
+    }
+  ];
+
   return (
     <Layout>
       <div ref={containerRef}>
@@ -228,7 +294,7 @@ export default function HomePage() {
         <section className="relative h-screen flex flex-col justify-end pb-20 overflow-hidden bg-primary">
           <motion.div style={{ scale, opacity }} className="absolute inset-0 z-0">
             <img
-              src="https://res.cloudinary.com/doeodacsg/image/upload/v1773321435/hero-bg_y2v2nz.png"
+              src={heroBg}
               alt="Construction Site"
               className="w-full h-full object-cover brightness-50"
             />
