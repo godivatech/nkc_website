@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { ArrowRight, Building2, Home, PaintBucket, MoveRight, MapPin, Target, TrendingUp } from "lucide-react";
 import heroBg from "@/assets/images/hero-bg.png";
-import imgAnandham from "@/assets/images/Projects/Andhaman Palace/Main.webp";
-import imgJSKMahal from "@/assets/images/Projects/JSK Mahal/Main.webp";
-import imgSivagangai from "@/assets/images/Projects/Sivagangai Mosque/Main.webp";
-import imgSrimethila from "@/assets/images/Projects/Srimethila Hotel/Main.webp";
-import imgVKT from "@/assets/images/Projects/VKT Commercial Complex/Main.webp";
+import imgAnandham from "@/assets/images/home page slider images/Anandam Palace.png";
+import imgJSKMahal from "@/assets/images/home page slider images/JSK mahal.png";
+import imgSivagangai from "@/assets/images/home page slider images/Sivagangai Mosque.png";
+import imgSrimethila from "@/assets/images/home page slider images/Srimethila Hotel.png";
+import imgVKT from "@/assets/images/home page slider images/VKT Commercial.png";
 import abstractTexture from "@/assets/images/texture-abstract.png";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -333,14 +333,16 @@ export default function HomePage() {
           </div>
 
           <div className="container mx-auto px-6">
-            <div className="max-w-5xl">
+            <div className="max-w-7xl">
               <motion.h2
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="text-4xl md:text-7xl font-display font-bold text-primary mb-16 leading-[0.95]"
               >
-                We build with <span className="text-secondary">Precision</span>. We design with <span className="italic font-light">Purpose</span>. We deliver with <span className="underline decoration-1 underline-offset-8">Excellence</span>.
+                WE BUILD WITH <span className="text-secondary">PRECISION</span><br />
+                WE DESIGN WITH <span className="italic font-light">PURPOSE</span><br />
+                WE DELIVER WITH <span className="underline decoration-2 underline-offset-8">EXCELLENCE</span>
               </motion.h2>
 
               <div className="grid md:grid-cols-2 gap-20">
@@ -369,7 +371,7 @@ export default function HomePage() {
           <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
 
           <div className="container mx-auto px-6 relative z-10">
-            <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20 border-b border-white/10 pb-12">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20 border-b border-white/10 pb-12">
               <div>
                 <span className="text-secondary font-display font-bold tracking-wider uppercase text-sm mb-4 block flex items-center gap-3">
                   <MapPin size={16} /> Operational Footprint
@@ -482,7 +484,7 @@ export default function HomePage() {
               className="flex gap-10 px-6 w-max"
             >
               {[
-                { title: "Anantham bungalow", cat: "Residential", img: imgAnandham, id: "01" },
+                { title: "Anandam Palace", cat: "Residential", img: imgAnandham, id: "01" },
                 { title: "JSK Mahal", cat: "Commercial", img: imgJSKMahal, id: "02" },
                 { title: "Sivagangai Mosque", cat: "Religious", img: imgSivagangai, id: "03" },
                 { title: "Srimethila Hotel", cat: "Hospitality", img: imgSrimethila, id: "04" },
@@ -514,7 +516,7 @@ export default function HomePage() {
         {/* Video Testimonials Showcase - Interactive Bento Grid */}
         <section className="py-32 bg-white overflow-hidden">
           <div className="container mx-auto px-6 mb-20">
-            <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

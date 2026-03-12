@@ -33,7 +33,7 @@ export function ProjectCard({ image, title, location, category, description, yea
             viewport={{ once: true }}
             className="group relative overflow-hidden cursor-pointer"
           >
-            <div className="aspect-[3/4] overflow-hidden bg-muted">
+            <div className="aspect-video overflow-hidden bg-muted">
               <img
                 src={image}
                 alt={title}
@@ -46,8 +46,8 @@ export function ProjectCard({ image, title, location, category, description, yea
             {/* Content Overlay */}
             <div className="absolute inset-0 p-8 flex flex-col justify-end text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
               <span className="text-secondary text-sm font-medium uppercase tracking-wider mb-2">{type || category}</span>
-              <h3 className="text-2xl font-display font-bold mb-1">{title}</h3>
-              <p className="text-white text-base mb-4 flex items-center gap-2">{location}</p>
+              <h3 className="text-3xl font-display font-bold mb-1">{title}</h3>
+              <p className="text-white text-lg mb-4 flex items-center gap-2">{location}</p>
               <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
                 <ArrowUpRight size={20} />
               </div>

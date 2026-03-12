@@ -8,7 +8,7 @@ import imgAnandham2 from "@/assets/images/Projects/Andhaman Palace/image 2.webp"
 import imgAnandham3 from "@/assets/images/Projects/Andhaman Palace/image 3.webp";
 import imgAnandham4 from "@/assets/images/Projects/Andhaman Palace/image 4.webp";
 import imgAnandham5 from "@/assets/images/Projects/Andhaman Palace/image 5.webp";
-import imgAnandham6 from "@/assets/images/Projects/Andhaman Palace/image 6.webp";
+import imgAnandham6 from "@/assets/images/Projects/Andhaman Palace/image 1.webp";
 import imgAnandham7 from "@/assets/images/Projects/Andhaman Palace/image 7.webp";
 import imgAnandham8 from "@/assets/images/Projects/Andhaman Palace/image 8.webp";
 
@@ -107,16 +107,30 @@ import imgVKT7 from "@/assets/images/Projects/VKT Commercial Complex/image 7.jpe
 import imgVKT8 from "@/assets/images/Projects/VKT Commercial Complex/image 8.jpeg";
 import imgVKT9 from "@/assets/images/Projects/VKT Commercial Complex/image 9.jpeg";
 
+// 16:9 main images
+import mainAnandham from "@/assets/images/home page slider images/Anandam Palace.png";
+import mainAnanthamOffice from "@/assets/images/home page slider images/Anantham Office.png";
+import mainAwinco from "@/assets/images/home page slider images/Awinco Badminton Court.png";
+import mainJSKRes from "@/assets/images/home page slider images/JSK Residence.png";
+import mainJSKMahal from "@/assets/images/home page slider images/JSK mahal.png";
+import mainJavith from "@/assets/images/home page slider images/Javith Residence.png";
+import mainJeyam from "@/assets/images/home page slider images/Jeyam Bridal fashion studio.png";
+import mainKarupusamy from "@/assets/images/home page slider images/Karupusamy Residence.png";
+import mainPeeriyapattinam from "@/assets/images/home page slider images/Peeriyapattinam Mosque.png";
+import mainSivagangai from "@/assets/images/home page slider images/Sivagangai Mosque.png";
+import mainSrimethila from "@/assets/images/home page slider images/Srimethila Hotel.png";
+import mainVKT from "@/assets/images/home page slider images/VKT Commercial.png";
+
 const projects = [
   {
     id: 1,
-    title: "Anantham bungalow",
+    title: "Anandam Palace",
     location: "Rajapalayam",
     category: "Residential",
     type: "Classic Bungalow",
     year: "Ongoing",
     status: "Ongoing",
-    image: imgAnandham,
+    image: mainAnandham,
     gallery: [
       imgAnandham, imgAnandham1, imgAnandham2, imgAnandham3, imgAnandham4,
       imgAnandham5, imgAnandham6, imgAnandham7, imgAnandham8
@@ -131,7 +145,7 @@ const projects = [
     type: "Sports Complex",
     year: "2025",
     status: "Completed",
-    image: imgAwinco,
+    image: mainAwinco,
     gallery: [imgAwinco, imgAwinco1, imgAwinco2, imgAwinco3],
     description: "This badminton court is a purpose-built indoor/outdoor sports facility designed for high-performance play, recreational use, or training. Engineered with precision and user comfort in mind, the court adheres strictly to standard dimensions and international specifications."
   },
@@ -143,7 +157,7 @@ const projects = [
     type: "Villa",
     year: "2025",
     status: "Completed",
-    image: imgJavith,
+    image: mainJavith,
     gallery: [
       imgJavith, imgJavith1, imgJavith2, imgJavith3, imgJavith4,
       imgJavith5, imgJavith6, imgJavith7, imgJavith8, imgJavith9, imgJavith10
@@ -158,19 +172,19 @@ const projects = [
     type: "Villa / Commercial",
     year: "2025",
     status: "Completed",
-    image: imgJeyam,
+    image: mainJeyam,
     gallery: [imgJeyam, imgJeyam1, imgJeyam2, imgJeyam3, imgJeyam4, imgJeyam5, imgJeyam6],
     description: "This modern residence is a bold expression of minimalism, function, and refined aesthetics, offering a seamless blend of architecture and lifestyle. Clean lines, open spaces, and natural light define the character of the home, where every detail is purposeful and uncluttered."
   },
   {
     id: 5,
-    title: "JSK Mahal",
+    title: "JSK mahal",
     location: "Ramanathapuram",
     category: "Commercial",
     type: "Multipurpose Hall",
     year: "Ongoing",
     status: "Ongoing",
-    image: imgJSKMahal,
+    image: mainJSKMahal,
     gallery: [
       imgJSKMahal, imgJSKMahal1, imgJSKMahal2, imgJSKMahal3,
       imgJSKMahal4, imgJSKMahal5, imgJSKMahal6
@@ -185,7 +199,7 @@ const projects = [
     type: "Modern Bungalow",
     year: "Ongoing",
     status: "Ongoing",
-    image: imgJSKRes,
+    image: mainJSKRes,
     gallery: [
       imgJSKRes, imgJSKRes1, imgJSKRes2, imgJSKRes3,
       imgJSKRes4, imgJSKRes5, imgJSKRes6, imgJSKRes7
@@ -200,7 +214,7 @@ const projects = [
     type: "Villa",
     year: "2015",
     status: "Completed",
-    image: imgKarupusamy,
+    image: mainKarupusamy,
     gallery: [
       imgKarupusamy, imgKarupusamy1, imgKarupusamy2, imgKarupusamy3,
       imgKarupusamy4, imgKarupusamy5, imgKarupusamy6, imgKarupusamy7,
@@ -217,7 +231,7 @@ const projects = [
     type: "Religious Building",
     year: "Ongoing",
     status: "Ongoing",
-    image: imgPeeriyapattinam,
+    image: mainPeeriyapattinam,
     gallery: [imgPeeriyapattinam, imgPeeriyapattinam1, imgPeeriyapattinam2, imgPeeriyapattinam3],
     description: "This modest mosque design reflects the essence of Islamic architecture through simplicity, spirituality, and community focus. Thoughtfully planned to serve a small congregation, the structure emphasizes clarity, accessibility, and serene aesthetics."
   },
@@ -229,7 +243,7 @@ const projects = [
     type: "Religious Building",
     year: "Ongoing",
     status: "Ongoing",
-    image: imgSivagangai,
+    image: mainSivagangai,
     gallery: [
       imgSivagangai, imgSivagangai1, imgSivagangai2, imgSivagangai3,
       imgSivagangai4, imgSivagangai5
@@ -244,7 +258,7 @@ const projects = [
     type: "Hospitality",
     year: "2023",
     status: "Completed",
-    image: imgSrimethila,
+    image: mainSrimethila,
     gallery: [
       imgSrimethila, imgSrimethila1, imgSrimethila2, imgSrimethila3,
       imgSrimethila4, imgSrimethila5, imgSrimethila6
@@ -253,13 +267,13 @@ const projects = [
   },
   {
     id: 11,
-    title: "VKT Commercial Complex",
+    title: "VKT Commercial",
     location: "Sivagangai",
     category: "Commercial",
     type: "Commercial Building",
     year: "2025",
     status: "Completed",
-    image: imgVKT,
+    image: mainVKT,
     gallery: [
       imgVKT, imgVKT1, imgVKT2, imgVKT3,
       imgVKT4, imgVKT5, imgVKT6, imgVKT7,
@@ -275,7 +289,7 @@ const projects = [
     type: "Office Space",
     year: "Ongoing",
     status: "Ongoing",
-    image: imgAnanthamOffice,
+    image: mainAnanthamOffice,
     gallery: [
       imgAnanthamOffice, imgAnanthamOffice1, imgAnanthamOffice2,
       imgAnanthamOffice3, imgAnanthamOffice4, imgAnanthamOffice5
@@ -316,7 +330,7 @@ export default function PortfolioPage() {
       </div>
 
       <div className="container mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-12">
           {filteredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}

@@ -257,7 +257,7 @@ export default function AboutPage() {
       {/* Team Section */}
       <section className="py-24 bg-zinc-50 overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
             <div>
               <span className="text-secondary font-bold tracking-wider uppercase text-sm mb-4 block">Our People</span>
               <h2 className="text-4xl font-display font-bold text-primary">Leadership Team</h2>
