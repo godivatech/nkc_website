@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
+import { getOptimizedImageUrl } from "@/lib/cloudinary";
 
 interface ProjectCardProps {
   image: string;
@@ -35,8 +36,9 @@ export function ProjectCard({ image, title, location, category, description, yea
           >
             <div className="aspect-video overflow-hidden bg-muted">
               <img
-                src={image}
+                src={getOptimizedImageUrl(image, { width: 1200, height: 675, crop: 'fill' })}
                 alt={title}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               {/* Overlay */}
@@ -64,7 +66,7 @@ export function ProjectCard({ image, title, location, category, description, yea
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  src={selectedImage}
+                  src={getOptimizedImageUrl(selectedImage, { width: 1600 })}
                   alt={title}
                   className="w-full h-full object-contain absolute inset-0 cursor-zoom-in"
                   onClick={() => setIsFullScreen(true)}
@@ -115,7 +117,12 @@ export function ProjectCard({ image, title, location, category, description, yea
                         className={`aspect-square overflow-hidden bg-muted cursor-pointer border-2 ${selectedImage === image ? 'border-secondary' : 'border-transparent'}`}
                         onClick={() => setSelectedImage(image)}
                       >
-                        <img src={image} alt="Main" className="w-full h-full object-cover hover:opacity-80 transition-opacity" />
+                        <img 
+                          src={getOptimizedImageUrl(image, { width: 300, height: 300, crop: 'fill' })} 
+                          alt="Main" 
+                          loading="lazy"
+                          className="w-full h-full object-cover hover:opacity-80 transition-opacity" 
+                        />
                       </div>
                       {/* Other Gallery Images */}
                       {gallery.filter(img => img !== image).map((img, i) => (
@@ -124,12 +131,18 @@ export function ProjectCard({ image, title, location, category, description, yea
                           className={`aspect-square overflow-hidden bg-muted cursor-pointer border-2 ${selectedImage === img ? 'border-secondary' : 'border-transparent'}`}
                           onClick={() => setSelectedImage(img)}
                         >
-                          <img src={img} alt={`${title} ${i + 1}`} className="w-full h-full object-cover hover:opacity-80 transition-opacity" />
+                          <img 
+                            src={getOptimizedImageUrl(img, { width: 300, height: 300, crop: 'fill' })} 
+                            alt={`${title} ${i + 1}`} 
+                            loading="lazy"
+                            className="w-full h-full object-cover hover:opacity-80 transition-opacity" 
+                          />
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
+
               </div>
             </ScrollArea>
           </div>

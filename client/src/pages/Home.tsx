@@ -4,13 +4,19 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { ArrowRight, Building2, Home, PaintBucket, MoveRight, MapPin, Target, TrendingUp } from "lucide-react";
-import heroBg from "@/assets/images/hero-bg.png";
-import imgAnandham from "@/assets/images/home page slider images/Anandam Palace.png";
-import imgJSKMahal from "@/assets/images/home page slider images/JSK mahal.png";
-import imgSivagangai from "@/assets/images/home page slider images/Sivagangai Mosque.png";
-import imgSrimethila from "@/assets/images/home page slider images/Srimethila Hotel.png";
-import imgVKT from "@/assets/images/home page slider images/VKT Commercial.png";
+// import heroBg from "@/assets/images/hero-bg.png";
 import abstractTexture from "@/assets/images/texture-abstract.png";
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Cloudinary Slider Image URLs
+// ─────────────────────────────────────────────────────────────────────────────
+const sliderImages = {
+  anandamPalace: "https://res.cloudinary.com/doeodacsg/image/upload/v1773314285/nkc-builders-website/slider/slider_anandam_palace.png",
+  jskMahal: "https://res.cloudinary.com/doeodacsg/image/upload/v1773314881/nkc-builders-website/slider/slider_jsk_mahal.png",
+  sivagangaiMosque: "https://res.cloudinary.com/doeodacsg/image/upload/v1773315363/nkc-builders-website/slider/slider_sivagangai_mosque.png",
+  srimethilaHotel: "https://res.cloudinary.com/doeodacsg/image/upload/v1773315486/nkc-builders-website/slider/slider_srimethila_hotel.png",
+  vktCommercial: "https://res.cloudinary.com/doeodacsg/image/upload/v1773315616/nkc-builders-website/slider/slider_vkt_commercial.png",
+};
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Testimonial Video URLs (Cloudinary)
@@ -24,6 +30,8 @@ const vidTest3 = "https://res.cloudinary.com/doeodacsg/video/upload/f_auto,q_aut
 const vidTest4 = "https://res.cloudinary.com/doeodacsg/video/upload/f_auto,q_auto,w_800/v1773222180/InShot_20260122_155805982_m6a7sq.mp4";
 
 import { Link } from "wouter";
+import { getOptimizedImageUrl } from "@/lib/cloudinary";
+
 
 
 
@@ -220,7 +228,7 @@ export default function HomePage() {
         <section className="relative h-screen flex flex-col justify-end pb-20 overflow-hidden bg-primary">
           <motion.div style={{ scale, opacity }} className="absolute inset-0 z-0">
             <img
-              src={heroBg}
+              src="https://res.cloudinary.com/doeodacsg/image/upload/v1773321435/hero-bg_y2v2nz.png"
               alt="Construction Site"
               className="w-full h-full object-cover brightness-50"
             />
@@ -246,6 +254,13 @@ export default function HomePage() {
                   </h1>
                 </motion.div>
               </div>
+
+
+
+
+
+
+
               <div className="lg:col-span-4 pb-4">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -289,7 +304,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <span className="text-secondary font-display font-bold tracking-wider text-sm uppercase block mb-4">Legacy</span>
+                <span className="text-secondary font-display font-bold tracking-wider text-xl uppercase block mb-4">Legacy</span>
                 <div className="text-6xl md:text-7xl font-display font-light text-primary mb-2 flex items-baseline justify-center md:justify-start">
                   18<span className="text-4xl text-secondary ml-1 font-bold">+</span>
                 </div>
@@ -305,7 +320,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <span className="text-secondary font-display font-bold tracking-wider text-sm uppercase block mb-4">Capacity</span>
+                <span className="text-secondary font-display font-bold tracking-wider text-xl uppercase block mb-4">Capacity</span>
                 <div className="text-6xl md:text-7xl font-display font-light text-primary mb-2 flex items-baseline justify-center md:justify-start">
                   1 L<span className="text-4xl text-secondary ml-1 font-bold">+</span>
                 </div>
@@ -321,7 +336,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <span className="text-secondary font-display font-bold tracking-wider text-sm uppercase block mb-4">Trust</span>
+                <span className="text-secondary font-display font-bold tracking-wider text-xl uppercase block mb-4">Trust</span>
                 <div className="text-6xl md:text-7xl font-display font-light text-primary mb-2 flex items-baseline justify-center md:justify-start">
                   400<span className="text-4xl text-secondary ml-1 font-bold">+</span>
                 </div>
@@ -484,18 +499,23 @@ export default function HomePage() {
               className="flex gap-10 px-6 w-max"
             >
               {[
-                { title: "Anandam Palace", cat: "Residential", img: imgAnandham, id: "01" },
-                { title: "JSK Mahal", cat: "Commercial", img: imgJSKMahal, id: "02" },
-                { title: "Sivagangai Mosque", cat: "Religious", img: imgSivagangai, id: "03" },
-                { title: "Srimethila Hotel", cat: "Hospitality", img: imgSrimethila, id: "04" },
-                { title: "VKT Commercial", cat: "Commercial", img: imgVKT, id: "05" },
+                { title: "Anandam Palace", cat: "Residential", img: sliderImages.anandamPalace, id: "01" },
+                { title: "JSK Mahal", cat: "Commercial", img: sliderImages.jskMahal, id: "02" },
+                { title: "Sivagangai Mosque", cat: "Religious", img: sliderImages.sivagangaiMosque, id: "03" },
+                { title: "Srimethila Hotel", cat: "Hospitality", img: sliderImages.srimethilaHotel, id: "04" },
+                { title: "VKT Commercial", cat: "Commercial", img: sliderImages.vktCommercial, id: "05" },
               ].map((p, i) => (
                 <div key={i} className="w-[80vw] md:w-[60vw] lg:w-[45vw] flex-shrink-0 group cursor-pointer">
                   <div className="aspect-[16/9] overflow-hidden bg-muted mb-6 relative">
                     <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-md px-4 py-2 text-white font-display text-sm border border-white/20 z-10">
                       {p.id}
                     </div>
-                    <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img 
+                      src={getOptimizedImageUrl(p.img, { width: 1200, height: 675, crop: 'fill' })} 
+                      alt={p.title} 
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                    />
                     <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
                   <div className="flex justify-between items-end border-b border-primary/10 pb-4">
@@ -512,6 +532,7 @@ export default function HomePage() {
             </motion.div>
           </div>
         </div>
+
 
         {/* Video Testimonials Showcase - Interactive Bento Grid */}
         <section className="py-32 bg-white overflow-hidden">
