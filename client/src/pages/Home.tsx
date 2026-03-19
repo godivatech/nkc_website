@@ -374,10 +374,10 @@ export default function HomePage() {
               >
                 <span className="text-secondary font-display font-bold tracking-wider text-xl uppercase block mb-4">Legacy</span>
                 <div className="text-6xl md:text-7xl font-display font-light text-primary mb-2 flex items-baseline justify-center md:justify-start">
-                  18<span className="text-4xl text-secondary ml-1 font-bold">+</span>
+                  20<span className="text-4xl text-secondary ml-1 font-bold">+</span>
                 </div>
                 <div className="text-muted-foreground uppercase tracking-wider text-xs font-bold mt-4 border-t border-primary/10 pt-4 group-hover:border-secondary transition-colors duration-500">
-                  Years of Excellence Since 2007
+                  Years of Excellence Since 2005
                 </div>
               </motion.div>
 
