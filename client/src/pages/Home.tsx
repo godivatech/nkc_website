@@ -526,24 +526,24 @@ export default function HomePage() {
             </div>
 
             <div className="grid md:grid-cols-3 border-y border-primary/10">
-              <div className="p-12 md:border-r border-primary/10 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-default">
+              <Link href="/portfolio" className="p-12 md:border-r border-primary/10 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-pointer block">
                 <span className="text-secondary font-display font-bold mb-10 block">01/</span>
                 <h3 className="text-4xl font-display font-bold mb-6">Residential</h3>
                 <p className="text-lg font-medium opacity-80 mb-10 leading-loose group-hover:opacity-100">Bespoke living environments crafted with artisanal precision and modern engineering.</p>
                 <ArrowRight className="group-hover:translate-x-4 transition-transform text-secondary" />
-              </div>
-              <div className="p-12 md:border-r border-primary/10 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-default">
+              </Link>
+              <Link href="/portfolio" className="p-12 md:border-r border-primary/10 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-pointer block">
                 <span className="text-secondary font-display font-bold mb-10 block">02/</span>
                 <h3 className="text-4xl font-display font-bold mb-6">Commercial</h3>
                 <p className="text-lg font-medium opacity-80 mb-10 leading-loose group-hover:opacity-100">Scalable infrastructure designed for the future of enterprise and retail.</p>
                 <ArrowRight className="group-hover:translate-x-4 transition-transform text-secondary" />
-              </div>
-              <div className="p-12 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-default">
+              </Link>
+              <Link href="/portfolio" className="p-12 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-pointer block">
                 <span className="text-secondary font-display font-bold mb-10 block">03/</span>
                 <h3 className="text-4xl font-display font-bold mb-6">Interiors</h3>
                 <p className="text-lg font-medium opacity-80 mb-10 leading-loose group-hover:opacity-100">Turnkey interior ecosystems that harmonize aesthetics with spatial functionality.</p>
                 <ArrowRight className="group-hover:translate-x-4 transition-transform text-secondary" />
-              </div>
+              </Link>
             </div>
           </div>
         </section>
@@ -573,7 +573,7 @@ export default function HomePage() {
                 { title: "Srimethila Hotel", cat: "Hospitality", img: sliderImages.srimethilaHotel, id: "04" },
                 { title: "VKT Commercial", cat: "Commercial", img: sliderImages.vktCommercial, id: "05" },
               ].map((p, i) => (
-                <div key={i} className="w-[80vw] md:w-[60vw] lg:w-[45vw] flex-shrink-0 group cursor-pointer">
+                <Link key={i} href="/portfolio" className="w-[80vw] md:w-[60vw] lg:w-[45vw] flex-shrink-0 group cursor-pointer">
                   <div className="aspect-[16/9] overflow-hidden bg-muted mb-6 relative">
                     <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-md px-4 py-2 text-white font-display text-sm border border-white/20 z-10">
                       {p.id}
@@ -595,7 +595,7 @@ export default function HomePage() {
                       <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </motion.div>
           </div>
