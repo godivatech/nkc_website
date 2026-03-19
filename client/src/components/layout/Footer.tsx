@@ -77,10 +77,21 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
           <p>© 2026 NKC Builders. All rights reserved.</p>
+          <p className="text-sm">
+            Designed and Developed by{" "}
+            <a 
+              href="https://godivatech.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-secondary hover:text-white transition-colors font-semibold"
+            >
+              Godiva tech
+            </a>
+          </p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white">Terms</a>
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Sitemap</a>
+            <a href="#" className="hover:text-white transition-colors">Terms</a>
+            <a href="#" className="hover:text-white transition-colors">Privacy</a>
+            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
           </div>
         </div>
       </div>
