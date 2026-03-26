@@ -51,6 +51,9 @@ import imgJSKMahal3 from "@/assets/images/Projects/JSK Mahal/image 3.webp";
 import imgJSKMahal4 from "@/assets/images/Projects/JSK Mahal/image 4.webp";
 import imgJSKMahal5 from "@/assets/images/Projects/JSK Mahal/image 5.webp";
 import imgJSKMahal6 from "@/assets/images/Projects/JSK Mahal/image 6.webp";
+import imgJSKMahal7 from "@/assets/images/Projects/JSK Mahal/image 7.webp";
+import imgJSKMahal8 from "@/assets/images/Projects/JSK Mahal/image 8.webp";
+import imgJSKMahal9 from "@/assets/images/Projects/JSK Mahal/image 9.webp";
 
 import imgJSKRes from "@/assets/images/Projects/JSK Residence/Main.webp";
 import imgJSKRes1 from "@/assets/images/Projects/JSK Residence/image 1.webp";
@@ -89,17 +92,15 @@ import imgSivagangai4 from "@/assets/images/Projects/Sivagangai Mosque/image 4.w
 import imgSivagangai5 from "@/assets/images/Projects/Sivagangai Mosque/image 5.webp";
 
 import imgSrimethila from "@/assets/images/Projects/Srimethila Hotel/Main.webp";
-import imgSrimethila1 from "@/assets/images/Projects/Srimethila Hotel/image 1.webp";
+// import imgSrimethila1 from "@/assets/images/Projects/Srimethila Hotel/image 1.webp";
 import imgSrimethila2 from "@/assets/images/Projects/Srimethila Hotel/image 2.webp";
-import imgSrimethila3 from "@/assets/images/Projects/Srimethila Hotel/image 3.webp";
+// import imgSrimethila3 from "@/assets/images/Projects/Srimethila Hotel/image 3.webp";
 import imgSrimethila4 from "@/assets/images/Projects/Srimethila Hotel/image 4.webp";
-import imgSrimethila5 from "@/assets/images/Projects/Srimethila Hotel/image 5.webp";
+// import imgSrimethila5 from "@/assets/images/Projects/Srimethila Hotel/image 5.webp";
 import imgSrimethila6 from "@/assets/images/Projects/Srimethila Hotel/image 6.webp";
 
-import imgVKT from "@/assets/images/Projects/VKT Commercial Complex/Main.webp";
-import imgVKT1 from "@/assets/images/Projects/VKT Commercial Complex/image 1.webp";
-import imgVKT2 from "@/assets/images/Projects/VKT Commercial Complex/image 2.webp";
-import imgVKT3 from "@/assets/images/Projects/VKT Commercial Complex/image 3.webp";
+// import imgVKT from "@/assets/images/Projects/VKT Commercial Complex/image 2.webp";
+// import imgVKT2 from "@/assets/images/Projects/VKT Commercial Complex/image 2.webp";
 import imgVKT4 from "@/assets/images/Projects/VKT Commercial Complex/image 4.webp";
 import imgVKT5 from "@/assets/images/Projects/VKT Commercial Complex/image 5.webp";
 import imgVKT6 from "@/assets/images/Projects/VKT Commercial Complex/image 6.webp";
@@ -122,7 +123,7 @@ const projectMainImages = {
   peeriyapattinam:      "https://res.cloudinary.com/doeodacsg/image/upload/v1773315244/nkc-builders-website/slider/slider_peeriyapattinam_mosque.png",
   sivagangaiMosque:     "https://res.cloudinary.com/doeodacsg/image/upload/v1773315363/nkc-builders-website/slider/slider_sivagangai_mosque.png",
   srimethilaHotel:      "https://res.cloudinary.com/doeodacsg/image/upload/v1773315486/nkc-builders-website/slider/slider_srimethila_hotel.png",
-  vktCommercial:        "https://res.cloudinary.com/doeodacsg/image/upload/v1773315616/nkc-builders-website/slider/slider_vkt_commercial.png",
+  vktCommercial:        "https://res.cloudinary.com/doeodacsg/image/upload/v1773314129/nkc-builders-website/projects/VKT%20Commercial%20Complex/vkt_commercial_complex_image_2.webp",
 };
 
 const projects = [
@@ -191,7 +192,8 @@ const projects = [
     image: projectMainImages.jskMahal,
     gallery: [
       imgJSKMahal, imgJSKMahal1, imgJSKMahal2, imgJSKMahal3,
-      imgJSKMahal4, imgJSKMahal5, imgJSKMahal6
+      imgJSKMahal4, imgJSKMahal5, imgJSKMahal6,
+      imgJSKMahal7, imgJSKMahal8, imgJSKMahal9
     ],
     description: "This multipurpose hall is a vibrant, adaptable space designed to accommodate a wide range of public and private functions. With its flexible layout, accessible design, and high-visibility location, the hall serves as a dynamic hub for cultural, social, and professional gatherings."
   },
@@ -264,8 +266,8 @@ const projects = [
     status: "Completed",
     image: projectMainImages.srimethilaHotel,
     gallery: [
-      imgSrimethila, imgSrimethila1, imgSrimethila2, imgSrimethila3,
-      imgSrimethila4, imgSrimethila5, imgSrimethila6
+      imgSrimethila, imgSrimethila2,
+      imgSrimethila4, imgSrimethila6
     ],
     description: "This multi-storey hotel is a modern hospitality landmark, offering a seamless blend of comfort, functionality, and refined design. Rising with elegant verticality, the building is designed to maximize spatial efficiency, guest experience, and visual appeal."
   },
@@ -279,9 +281,10 @@ const projects = [
     status: "Completed",
     image: projectMainImages.vktCommercial,
     gallery: [
-      imgVKT, imgVKT1, imgVKT2, imgVKT3,
-      imgVKT4, imgVKT5, imgVKT6, imgVKT7,
-      imgVKT8, imgVKT9
+      "https://res.cloudinary.com/doeodacsg/image/upload/v1773314129/nkc-builders-website/projects/VKT%20Commercial%20Complex/vkt_commercial_complex_image_2.webp",
+      "https://res.cloudinary.com/doeodacsg/image/upload/v1773314129/nkc-builders-website/projects/VKT%20Commercial%20Complex/vkt_commercial_complex_image_2.webp",
+      imgVKT4, imgVKT5, imgVKT6,
+      imgVKT7, imgVKT8, imgVKT9
     ],
     description: "This modern commercial complex is a multi-functional destination that blends business, leisure, and hospitality under one roof. Designed with a focus on efficiency, elegance, and experience, the building integrates a spacious banquet hall and fine-dining restaurant."
   },
