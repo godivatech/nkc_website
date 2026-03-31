@@ -9,7 +9,6 @@ import imgSaranya from "@/assets/images/Team/MRS. Saranya-Purchase Manager.webp"
 import imgMurali from "@/assets/images/Team/Mr. Muralitharan-Procurement Manager.webp";
 import imgDurai from "@/assets/images/Team/Mr. Duraikoothan-Site Manager.webp";
 import imgHari from "@/assets/images/Team/Mr. Hariharasudan-Site Engineer.webp";
-import imgIbrahim from "@/assets/images/Team/Mr. Ibrahim-Quantity Surveyor.webp";
 import imgMathi from "@/assets/images/Team/Ar. Mathiyalagan-Junior Architect.webp";
 import { useRef, useState } from "react";
 
@@ -276,13 +275,12 @@ export default function AboutPage() {
                 { name: "Mr. Muralitharan", role: "Procurement Manager", img: imgMurali },
                 { name: "Mr. Duraikoothan", role: "Site Manager", img: imgDurai },
                 { name: "Mr. Hariharasudan", role: "Site Engineer", img: imgHari },
-                { name: "Mr. Ibrahim", role: "Quantity Surveyor", img: imgIbrahim },
                 { name: "Ar. Mathiyalagan", role: "Junior Architect", img: imgMathi }
               ].map((member, i) => (
                 <motion.div
                   key={i}
                   onMouseEnter={() => setActiveMember(i)}
-                  className={`group cursor-pointer py-4 border-b border-primary/10 flex items-center justify-between transition-all duration-300 ${activeMember === i ? 'pl-4 border-secondary' : 'hover:pl-2'}`}
+                  className={`group cursor-default py-4 border-b border-primary/10 flex items-center justify-between transition-all duration-300 ${activeMember === i ? 'pl-4 border-secondary' : 'hover:pl-2'}`}
                 >
                   <div>
                     <h3 className={`text-xl md:text-2xl font-display font-bold transition-colors duration-300 ${activeMember === i ? 'text-primary' : 'text-primary/40 group-hover:text-primary/70'}`}>
@@ -311,7 +309,6 @@ export default function AboutPage() {
                     { name: "Mr. Muralitharan", role: "Procurement Manager", img: imgMurali },
                     { name: "Mr. Duraikoothan", role: "Site Manager", img: imgDurai },
                     { name: "Mr. Hariharasudan", role: "Site Engineer", img: imgHari },
-                    { name: "Mr. Ibrahim", role: "Quantity Surveyor", img: imgIbrahim },
                     { name: "Ar. Mathiyalagan", role: "Junior Architect", img: imgMathi }
                   ].map((member, i) => (
                     activeMember === i && (
