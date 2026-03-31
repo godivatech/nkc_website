@@ -424,7 +424,7 @@ export default function HomePage() {
                   15 L<span className="text-4xl text-secondary ml-1 font-bold">+</span>
                 </div>
                 <div className="text-muted-foreground uppercase tracking-wider text-xs font-bold mt-4 border-t border-primary/10 pt-4 group-hover:border-secondary transition-colors duration-500">
-                  Sq. Ft. Delivery Capacity & Assets
+                  Sq. Ft. Delivered
                 </div>
               </motion.div>
 
