@@ -205,6 +205,20 @@ function VideoCard({ src, index }: { src: string; index: number }) {
 
 export default function HomePage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const heroSlides = [
+    { title: "Architecture", subtitle: "Is a language" },
+    { title: "Construction", subtitle: "We Build Dreams" }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -304,41 +318,58 @@ export default function HomePage() {
           </motion.div>
 
           <div className="container mx-auto px-6 relative z-10">
-            <div className="grid lg:grid-cols-12 gap-10 items-end">
-              <div className="lg:col-span-8">
+            <div className="flex flex-col gap-10 w-full">
+              <div className="w-full">
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <span className="text-secondary font-display font-bold tracking-wider uppercase text-xs mb-8 block">
-                    Established 2015 — Chennai
+                  <span className="text-secondary font-display font-bold tracking-wider uppercase text-xs mb-6 sm:mb-8 block">
+                    Building Excellence
                   </span>
-                  <h1 className="text-[clamp(3rem,10vw,8rem)] font-display font-bold text-white mb-8 leading-[0.85] tracking-normal uppercase">
-                    Architecture<br />
-                    <span className="text-transparent border-t-2 border-white/20 pt-4 inline-block w-full" style={{ WebkitTextStroke: '1px white' }}>
-                      Is a language
-                    </span>
+                  <h1 className="text-[clamp(2.5rem,7vw,8rem)] font-display font-bold text-white mb-8 leading-[1.1] md:leading-[1] tracking-normal uppercase relative grid pr-2 sm:pr-4 min-h-[150px]">
+                    {/* Invisible copy using the longest text to perfectly size the container height/width */}
+                    <div className="invisible col-start-1 row-start-1 flex flex-col justify-start" aria-hidden="true">
+                      <span className="block drop-shadow-lg">Construction</span>
+                      <span className="text-transparent border-t-2 border-white/20 pt-2 sm:pt-4 block w-full drop-shadow-lg" style={{ WebkitTextStroke: '1px white' }}>
+                        We Build Dreams
+                      </span>
+                    </div>
+
+                    {/* Animated slides */}
+                    <AnimatePresence>
+                      <motion.div
+                        key={currentSlide}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -30 }}
+                        transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
+                        className="col-start-1 row-start-1 w-full flex flex-col justify-start"
+                      >
+                        <span className="block drop-shadow-lg">
+                          {heroSlides[currentSlide].title}
+                        </span>
+                        <span className="text-transparent border-t-2 border-white/20 pt-2 sm:pt-4 block w-full drop-shadow-lg" style={{ WebkitTextStroke: '1px white' }}>
+                          {heroSlides[currentSlide].subtitle}
+                        </span>
+                      </motion.div>
+                    </AnimatePresence>
                   </h1>
                 </motion.div>
               </div>
 
-
-
-
-
-
-
-              <div className="lg:col-span-4 pb-4">
+              <div className="w-full">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                  className="flex flex-col sm:flex-row sm:items-end justify-between gap-6"
                 >
-                  <p className="text-white/60 text-lg font-light mb-10 leading-relaxed max-w-sm">
+                  <p className="text-white/60 text-lg font-light leading-relaxed max-w-sm">
                     We translate complex visions into monolithic structures that define the modern skyline of South India.
                   </p>
-                  <div className="flex gap-6">
+                  <div className="flex gap-6 pb-2">
                     <Button asChild variant="link" className="text-white group p-0 h-auto text-sm tracking-wider uppercase">
                       <Link href="/portfolio" className="flex items-center gap-3">
                         Our Work <MoveRight className="group-hover:translate-x-2 transition-transform" />
@@ -390,7 +421,7 @@ export default function HomePage() {
               >
                 <span className="text-secondary font-display font-bold tracking-wider text-xl uppercase block mb-4">Capacity</span>
                 <div className="text-6xl md:text-7xl font-display font-light text-primary mb-2 flex items-baseline justify-center md:justify-start">
-                  1 L<span className="text-4xl text-secondary ml-1 font-bold">+</span>
+                  15 L<span className="text-4xl text-secondary ml-1 font-bold">+</span>
                 </div>
                 <div className="text-muted-foreground uppercase tracking-wider text-xs font-bold mt-4 border-t border-primary/10 pt-4 group-hover:border-secondary transition-colors duration-500">
                   Sq. Ft. Delivery Capacity & Assets
@@ -525,23 +556,23 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 border-y border-primary/10">
-              <Link href="/portfolio" className="p-12 md:border-r border-primary/10 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-pointer block">
-                <span className="text-secondary font-display font-bold mb-10 block">01/</span>
-                <h3 className="text-4xl font-display font-bold mb-6">Residential</h3>
-                <p className="text-lg font-medium opacity-80 mb-10 leading-loose group-hover:opacity-100">Bespoke living environments crafted with artisanal precision and modern engineering.</p>
+            <div className="grid lg:grid-cols-3 border-y border-primary/10">
+              <Link href="/portfolio" className="p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-primary/10 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-pointer block">
+                <span className="text-secondary font-display font-bold mb-8 lg:mb-10 block">01/</span>
+                <h3 className="text-3xl lg:text-4xl font-display font-bold mb-6">Residential</h3>
+                <p className="text-base lg:text-lg font-medium opacity-80 mb-8 lg:mb-10 leading-loose group-hover:opacity-100">Bespoke living environments crafted with artisanal precision and modern engineering.</p>
                 <ArrowRight className="group-hover:translate-x-4 transition-transform text-secondary" />
               </Link>
-              <Link href="/portfolio" className="p-12 md:border-r border-primary/10 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-pointer block">
-                <span className="text-secondary font-display font-bold mb-10 block">02/</span>
-                <h3 className="text-4xl font-display font-bold mb-6">Commercial</h3>
-                <p className="text-lg font-medium opacity-80 mb-10 leading-loose group-hover:opacity-100">Scalable infrastructure designed for the future of enterprise and retail.</p>
+              <Link href="/portfolio" className="p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-primary/10 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-pointer block">
+                <span className="text-secondary font-display font-bold mb-8 lg:mb-10 block">02/</span>
+                <h3 className="text-3xl lg:text-4xl font-display font-bold mb-6">Commercial</h3>
+                <p className="text-base lg:text-lg font-medium opacity-80 mb-8 lg:mb-10 leading-loose group-hover:opacity-100">Scalable infrastructure designed for the future of enterprise and retail.</p>
                 <ArrowRight className="group-hover:translate-x-4 transition-transform text-secondary" />
               </Link>
-              <Link href="/portfolio" className="p-12 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-pointer block">
-                <span className="text-secondary font-display font-bold mb-10 block">03/</span>
-                <h3 className="text-4xl font-display font-bold mb-6">Interiors</h3>
-                <p className="text-lg font-medium opacity-80 mb-10 leading-loose group-hover:opacity-100">Turnkey interior ecosystems that harmonize aesthetics with spatial functionality.</p>
+              <Link href="/portfolio" className="p-8 lg:p-12 hover:bg-primary hover:text-white transition-colors duration-500 group cursor-pointer block">
+                <span className="text-secondary font-display font-bold mb-8 lg:mb-10 block">03/</span>
+                <h3 className="text-3xl lg:text-4xl font-display font-bold mb-6">Exterior &amp; Interior</h3>
+                <p className="text-base lg:text-lg font-medium opacity-80 mb-8 lg:mb-10 leading-loose group-hover:opacity-100">Complete exterior facades and turnkey interior ecosystems that harmonize aesthetics with spatial functionality.</p>
                 <ArrowRight className="group-hover:translate-x-4 transition-transform text-secondary" />
               </Link>
             </div>
