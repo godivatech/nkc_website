@@ -10,7 +10,32 @@ import imgMurali from "@/assets/images/Team/Mr. Muralitharan-Procurement Manager
 import imgDurai from "@/assets/images/Team/Mr. Duraikoothan-Site Manager.webp";
 import imgHari from "@/assets/images/Team/Mr. Hariharasudan-Site Engineer.webp";
 import imgMathi from "@/assets/images/Team/Ar. Mathiyalagan-Junior Architect.webp";
+import imgRoshini from "@/assets/images/Team/AR. Roshini - Architect.jpeg";
+import imgIbrahim from "@/assets/images/Team/Mr. Ibrahim-Quantity Surveyor.webp";
+import imgJeeva from "@/assets/images/Team/Mr. Jeeva - Site Engineer.jpeg";
+import imgKarthik from "@/assets/images/Team/Mr. Karthik - Site Engineer.jpeg";
+import imgMKarthi from "@/assets/images/Team/Mr. M. Karthi - Site Manager.jpeg";
+import imgNaveen from "@/assets/images/Team/Mr. Naveen - QS.jpeg";
+import imgPoornima from "@/assets/images/Team/Mrs. Poornima - Admin.jpeg";
 import { useRef, useState } from "react";
+
+const teamMembers = [
+  { name: "Mr. NK. Chandrasoodan", role: "Founder", img: imgFounder },
+  { name: "Ar. Pravin Kumar", role: "Project architect", img: imgPravin },
+  { name: "AR. Roshini", role: "Architect", img: imgRoshini },
+  { name: "Mr. Ramesh Kannan", role: "Project Manager", img: imgRamesh },
+  { name: "Mrs. Saranya", role: "Purchase Manager", img: imgSaranya },
+  { name: "Mr. Muralitharan", role: "Procurement Manager", img: imgMurali },
+  { name: "Mr. Duraikoothan", role: "Site Manager", img: imgDurai },
+  { name: "Mr. M. Karthi", role: "Site Manager", img: imgMKarthi },
+  { name: "Mr. Hariharasudan", role: "Site Engineer", img: imgHari },
+  { name: "Mr. Jeeva", role: "Site Engineer", img: imgJeeva },
+  { name: "Mr. Karthik", role: "Site Engineer", img: imgKarthik },
+  { name: "Ar. Mathiyalagan", role: "Architect", img: imgMathi },
+  { name: "Mr. Ibrahim", role: "Quantity Surveyor", img: imgIbrahim },
+  { name: "Mr. Naveen", role: "QS", img: imgNaveen },
+  { name: "Mrs. Poornima", role: "Admin", img: imgPoornima },
+];
 
 export default function AboutPage() {
   const timelineRef = useRef(null);
@@ -254,7 +279,7 @@ export default function AboutPage() {
 
 
       {/* Team Section */}
-      <section className="py-24 bg-zinc-50 overflow-hidden">
+      <section className="py-24 bg-zinc-50">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
             <div>
@@ -266,17 +291,8 @@ export default function AboutPage() {
 
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
             {/* Left: Interactive List */}
-            <div className="lg:col-span-5 flex flex-col justify-center space-y-2">
-              {[
-                { name: "Mr. NK. Chandrasoodan", role: "Architect Founder", img: imgFounder },
-                { name: "Ar. Pravin Kumar", role: "Senior Architect", img: imgPravin },
-                { name: "Mr. Ramesh Kannan", role: "Project Manager", img: imgRamesh },
-                { name: "Mrs. Saranya", role: "Purchase Manager", img: imgSaranya },
-                { name: "Mr. Muralitharan", role: "Procurement Manager", img: imgMurali },
-                { name: "Mr. Duraikoothan", role: "Site Manager", img: imgDurai },
-                { name: "Mr. Hariharasudan", role: "Site Engineer", img: imgHari },
-                { name: "Ar. Mathiyalagan", role: "Junior Architect", img: imgMathi }
-              ].map((member, i) => (
+            <div className="lg:col-span-5 flex flex-col justify-start space-y-2">
+              {teamMembers.map((member, i) => (
                 <motion.div
                   key={i}
                   onMouseEnter={() => setActiveMember(i)}
@@ -298,19 +314,10 @@ export default function AboutPage() {
             </div>
 
             {/* Right: Sticky Image Display */}
-            <div className="lg:col-span-7 sticky top-24">
+            <div className="lg:col-span-7 lg:sticky lg:top-32 self-start">
               <div className="relative aspect-[4/3] md:aspect-[16/9] lg:aspect-[3/2] overflow-hidden rounded-sm bg-primary/5">
                 <AnimatePresence mode="wait">
-                  {[
-                    { name: "Mr. NK. Chandrasoodan", role: "Architect Founder", img: imgFounder },
-                    { name: "Ar. Pravin Kumar", role: "Senior Architect", img: imgPravin },
-                    { name: "Mr. Ramesh Kannan", role: "Project Manager", img: imgRamesh },
-                    { name: "Mrs. Saranya", role: "Purchase Manager", img: imgSaranya },
-                    { name: "Mr. Muralitharan", role: "Procurement Manager", img: imgMurali },
-                    { name: "Mr. Duraikoothan", role: "Site Manager", img: imgDurai },
-                    { name: "Mr. Hariharasudan", role: "Site Engineer", img: imgHari },
-                    { name: "Ar. Mathiyalagan", role: "Junior Architect", img: imgMathi }
-                  ].map((member, i) => (
+                  {teamMembers.map((member, i) => (
                     activeMember === i && (
                       <motion.div
                         key={i}
