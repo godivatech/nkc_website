@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Check, Users, Leaf, ShieldCheck, Linkedin, ArrowRight, MapPin, Target, Building2, TrendingUp } from "lucide-react";
 import teamImg from "@/assets/images/about-team.png";
-import imgFounder from "@/assets/images/Team/Profile.jpg";
+import imgFounder from "@/assets/images/Team/3.png";
 import imgPravin from "@/assets/images/Team/Ar. Pravin kumar-Senior Architect.webp";
 import imgRamesh from "@/assets/images/Team/MR. Ramesh Kannan-Project Manager.webp";
 import imgSaranya from "@/assets/images/Team/MRS. Saranya-Purchase Manager.webp";
@@ -11,10 +11,9 @@ import imgDurai from "@/assets/images/Team/Mr. Duraikoothan-Site Manager.webp";
 import imgHari from "@/assets/images/Team/Mr. Hariharasudan-Site Engineer.webp";
 import imgMathi from "@/assets/images/Team/Ar. Mathiyalagan-Junior Architect.webp";
 import imgRoshini from "@/assets/images/Team/AR. Roshini - Architect.jpeg";
-import imgIbrahim from "@/assets/images/Team/Mr. Ibrahim-Quantity Surveyor.webp";
-import imgJeeva from "@/assets/images/Team/Mr. Jeeva - Site Engineer.jpeg";
-import imgKarthik from "@/assets/images/Team/Mr. Karthik - Site Engineer.jpeg";
-import imgMKarthi from "@/assets/images/Team/Mr. M. Karthi - Site Manager.jpeg";
+import imgJeeva from "@/assets/images/Team/Mr. Jeeva - Site Engineer.png";
+import imgKarthik from "@/assets/images/Team/Mr. Karthik - Site Engineer.png";
+import imgMKarthi from "@/assets/images/Team/Mr. M. Karthi - Site Manager.png";
 import imgNaveen from "@/assets/images/Team/Mr. Naveen - QS.jpeg";
 import imgPoornima from "@/assets/images/Team/Mrs. Poornima - Admin.jpeg";
 import { useRef, useState } from "react";
@@ -32,7 +31,6 @@ const teamMembers = [
   { name: "Mr. Jeeva", role: "Site Engineer", img: imgJeeva },
   { name: "Mr. Karthik", role: "Site Engineer", img: imgKarthik },
   { name: "Ar. Mathiyalagan", role: "Architect", img: imgMathi },
-  { name: "Mr. Ibrahim", role: "Quantity Surveyor", img: imgIbrahim },
   { name: "Mr. Naveen", role: "QS", img: imgNaveen },
   { name: "Mrs. Poornima", role: "Admin", img: imgPoornima },
 ];
