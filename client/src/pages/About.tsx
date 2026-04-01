@@ -39,10 +39,10 @@ export default function AboutPage() {
   const [activeMember, setActiveMember] = useState(0);
   const { scrollYProgress } = useScroll({
     target: timelineRef,
-    offset: ["start end", "end start"]
+    offset: ["start start", "end end"]
   });
 
-  const x = useTransform(scrollYProgress, [0.1, 0.9], ["20%", "-200%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-82%"]);
   return (
     <Layout>
       {/* Hero */}
