@@ -20,19 +20,18 @@ import { useRef, useState } from "react";
 
 const teamMembers = [
   { name: "Mr. NK. Chandrasoodan", role: "Founder", img: imgFounder },
-  { name: "Ar. Pravin Kumar", role: "Project architect", img: imgPravin },
-  { name: "AR. Roshini", role: "Architect", img: imgRoshini },
-  { name: "Mr. Ramesh Kannan", role: "Project Manager", img: imgRamesh },
-  { name: "Mrs. Saranya", role: "Purchase Manager", img: imgSaranya },
-  { name: "Mr. Muralitharan", role: "Procurement Manager", img: imgMurali },
-  { name: "Mr. Duraikoothan", role: "Site Manager", img: imgDurai },
-  { name: "Mr. M. Karthi", role: "Site Manager", img: imgMKarthi },
-  { name: "Mr. Hariharasudan", role: "Site Engineer", img: imgHari },
-  { name: "Mr. Jeeva", role: "Site Engineer", img: imgJeeva },
-  { name: "Mr. Karthik", role: "Site Engineer", img: imgKarthik },
-  { name: "Ar. Mathiyalagan", role: "Architect", img: imgMathi },
-  { name: "Mr. Naveen", role: "QS", img: imgNaveen },
   { name: "Mrs. Poornima", role: "Admin", img: imgPoornima },
+  { name: "Mr. Ramesh Kannan", role: "Project Manager", img: imgRamesh },
+  { name: "Mr. Duraikoothan", role: "Site Manager", img: imgDurai },
+  { name: "Mrs. Saranya", role: "Purchase Manager", img: imgSaranya },
+  { name: "Ar. Pravin Kumar", role: "Project architect", img: imgPravin },
+  { name: "Mr. Muralitharan", role: "Procurement Manager", img: imgMurali },
+  { name: "Ar. Mathiyalagan", role: "Architect", img: imgMathi },
+  { name: "Mr. Hariharasudan", role: "Site Engineer", img: imgHari },
+  { name: "Mr. M. Karthi", role: "Site Manager", img: imgMKarthi },
+  { name: "AR. Roshini", role: "Architect", img: imgRoshini },
+  { name: "Mr. Jeeva", role: "Site Engineer", img: imgJeeva },
+  { name: "Mr. Naveen", role: "QS", img: imgNaveen },
 ];
 
 export default function AboutPage() {
