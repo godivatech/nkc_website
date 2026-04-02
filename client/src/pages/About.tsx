@@ -12,8 +12,8 @@ import imgHari from "@/assets/images/Team/Mr. Hariharasudan - Site engineer.png"
 import imgMathi from "@/assets/images/Team/Ar. Mathiyalagan-Junior Architect.webp";
 import imgRoshini from "@/assets/images/Team/AR. Roshini - Architect.jpeg";
 import imgJeeva from "@/assets/images/Team/Mr. Jeeva - Site Engineer.png";
-import imgKarthik from "@/assets/images/Team/Mr. Karthik - Site Engineer.png";
-import imgMKarthi from "@/assets/images/Team/Mr. M. Karthi - Site Manager.png";
+import imgKarthik from "@/assets/images/Team/M. Karthik - Site Engineer.png";
+import imgMKarthi from "@/assets/images/Team/D. Karthi - Site Manager.png";
 import imgNaveen from "@/assets/images/Team/Mr. Naveen - QS.jpeg";
 import imgPoornima from "@/assets/images/Team/Mrs. Poornima - Admin.jpeg";
 import { useRef, useState } from "react";
@@ -28,11 +28,11 @@ const teamMembers = [
   { name: "Mr. Muralitharan", role: "Procurement Manager", img: imgMurali },
   { name: "Ar. Mathiyalagan", role: "Architect", img: imgMathi },
   { name: "Mr. Hariharasudan", role: "Site Engineer", img: imgHari },
-  { name: "Mr. M. Karthi", role: "Site Manager", img: imgMKarthi },
+  { name: "D. Karthi", role: "Site Manager", img: imgMKarthi },
   { name: "AR. Roshini", role: "Architect", img: imgRoshini },
   { name: "Mr. Jeeva", role: "Site Engineer", img: imgJeeva },
   { name: "Mr. Naveen", role: "QS", img: imgNaveen },
-  { name: "Mr. Karthik", role: "Site Engineer", img: imgKarthik },
+  { name: "M. Karthik", role: "Site Engineer", img: imgKarthik },
 ];
 
 export default function AboutPage() {
