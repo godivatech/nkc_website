@@ -8,7 +8,7 @@ import imgRamesh from "@/assets/images/Team/MR. Ramesh Kannan-Project Manager.we
 import imgSaranya from "@/assets/images/Team/MRS. Saranya-Purchase Manager.webp";
 import imgMurali from "@/assets/images/Team/Mr. Muralitharan-Procurement Manager.webp";
 import imgDurai from "@/assets/images/Team/Mr. Duraikoothan-Site Manager.webp";
-import imgHari from "@/assets/images/Team/Mr. Hariharasudan-Site Engineer.webp";
+import imgHari from "@/assets/images/Team/Mr. Hariharasudan - Site engineer.png";
 import imgMathi from "@/assets/images/Team/Ar. Mathiyalagan-Junior Architect.webp";
 import imgRoshini from "@/assets/images/Team/AR. Roshini - Architect.jpeg";
 import imgJeeva from "@/assets/images/Team/Mr. Jeeva - Site Engineer.png";
@@ -32,6 +32,7 @@ const teamMembers = [
   { name: "AR. Roshini", role: "Architect", img: imgRoshini },
   { name: "Mr. Jeeva", role: "Site Engineer", img: imgJeeva },
   { name: "Mr. Naveen", role: "QS", img: imgNaveen },
+  { name: "Mr. Karthik", role: "Site Engineer", img: imgKarthik },
 ];
 
 export default function AboutPage() {
