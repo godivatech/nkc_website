@@ -28,11 +28,11 @@ const teamMembers = [
   { name: "Mr. Muralitharan", role: "Procurement Manager", img: imgMurali },
   { name: "Ar. Mathiyalagan", role: "Architect", img: imgMathi },
   { name: "Mr. Hariharasudan", role: "Site Engineer", img: imgHari },
-  { name: "D. Karthi", role: "Site Manager", img: imgMKarthi },
+  { name: "M. Karthik", role: "Site Engineer", img: imgKarthik },
   { name: "AR. Roshini", role: "Architect", img: imgRoshini },
+  { name: "D. Karthi", role: "Site Manager", img: imgMKarthi },
   { name: "Mr. Jeeva", role: "Site Engineer", img: imgJeeva },
   { name: "Mr. Naveen", role: "QS", img: imgNaveen },
-  { name: "M. Karthik", role: "Site Engineer", img: imgKarthik },
 ];
 
 export default function AboutPage() {
