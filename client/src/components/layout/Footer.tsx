@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
-import logo from "@/assets/images/logo.png";
+import logo from "@/assets/images/footer-logo.png";
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
-              <img src={logo} alt="NKC Builders" className="h-14 w-auto bg-white p-1" />
+              <img src={logo} alt="NKC Builders" className="h-14 w-auto drop-shadow-md" />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed">
               Turning Visions into Timeless Structures. Premium residential and commercial construction in Chennai.
